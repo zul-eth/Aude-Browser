@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Aude Browser</string>
+    <string name="menu_theme_dark">Mode Gelap</string>
+    <string name="menu_theme_light">Mode Terang</string>
+</resources>

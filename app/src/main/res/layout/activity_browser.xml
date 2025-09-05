@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <com.google.android.material.appbar.MaterialToolbar
+      android:id="@+id/toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="?attr/actionBarSize"
+      android:background="?attr/colorSurface"
+      app:title=""
+      app:menu="@menu/menu_browser"
+      app:contentInsetStartWithNavigation="56dp"
+      app:contentInsetEndWithActions="100dp">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/urlLayout"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_gravity="center_vertical"
+        app:boxBackgroundMode="outline"
+        app:boxStrokeWidth="1dp"
+        app:boxStrokeWidthFocused="2dp"
+        app:boxCornerRadiusTopStart="14dp"
+        app:boxCornerRadiusTopEnd="14dp"
+        app:boxCornerRadiusBottomStart="14dp"
+        app:boxCornerRadiusBottomEnd="14dp"
+        app:hintEnabled="false"
+        app:startIconDrawable="@drawable/ic_lock"
+        app:endIconMode="clear_text">
+
+      <com.google.android.material.textfield.TextInputEditText
+          android:id="@+id/urlInput"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:gravity="center_vertical"
+          android:paddingStart="10dp"
+          android:paddingEnd="10dp"
+          android:textSize="14sp"
+          android:hint="Telusuri atau ketik alamat web"
+          android:singleLine="true"
+          android:inputType="textUri|textNoSuggestions"
+          android:imeOptions="actionGo" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+  </com.google.android.material.appbar.MaterialToolbar>
+
+  <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+      android:id="@+id/swipe"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_weight="1">
+
+    <FrameLayout
+        android:id="@+id/webContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+  </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</LinearLayout>

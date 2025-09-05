@@ -1,0 +1,48 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <!-- Permissions dasar browser -->
+  <uses-permission android:name="android.permission.INTERNET" />
+  <!-- Opsional (jika butuh WebRTC/Geo) -->
+  <uses-permission android:name="android.permission.CAMERA" />
+  <uses-permission android:name="android.permission.RECORD_AUDIO" />
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+  <!-- Hanya untuk <29 bila menyimpan ke public Downloads -->
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="28"/>
+
+  <application
+      android:name=".AudeonApp"
+      android:label="@string/app_name"
+      android:theme="@style/AppTheme"
+      android:usesCleartextTraffic="false">
+
+    <!-- Launcher / entry -->
+    <activity
+        android:name=".EntryActivity"
+        android:exported="true"
+        android:label="@string/app_name">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+
+    <!-- **Tambahkan ini**: BrowserActivity harus terdaftar -->
+    <activity
+        android:name=".BrowserActivity"
+        android:exported="false" />
+        
+    <provider
+        android:name=".WebViewInitProvider"
+        android:authorities="${applicationId}.webviewinit"
+        android:exported="false"
+        android:initOrder="100" />
+        
+    <receiver
+        android:name=".RelaunchReceiver"
+        android:exported="false"
+        android:process=":relauncher" />
+        
+        
+  </application>
+</manifest>
+
