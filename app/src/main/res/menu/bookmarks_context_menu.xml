@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  Copyright 2015-2017, 2020, 2022-2024 Soren Stoutner <soren@stoutner.com>.
+
+  This file is part of Privacy Browser Android <https://www.stoutner.com/privacy-browser-android/>.
+
+  Privacy Browser Android is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+
+  Privacy Browser Android is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with Privacy Browser Android.  If not, see <https://www.gnu.org/licenses/>. -->
+
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/move_bookmark_up"
+        android:title="@string/move_up"
+        android:orderInCategory="10"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/move_bookmark_down"
+        android:title="@string/move_down"
+        android:orderInCategory="20"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/move_to_top"
+        android:title="@string/move_to_top"
+        android:orderInCategory="30"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/move_to_bottom"
+        android:title="@string/move_to_bottom"
+        android:orderInCategory="40"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/move_to_folder"
+        android:title="@string/move_to_folder"
+        android:orderInCategory="50"
+        android:icon="@drawable/move_to_folder_blue"
+        android:iconTint="@color/icon"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/edit_bookmark"
+        android:title="@string/edit"
+        android:orderInCategory="60"
+        android:icon="@drawable/edit"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/delete_bookmark"
+        android:title="@string/delete"
+        android:orderInCategory="70"
+        android:icon="@drawable/delete"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/context_menu_select_all_bookmarks"
+        android:title="@string/select_all"
+        android:orderInCategory="80"
+        android:icon="@drawable/select_all"
+        app:showAsAction="ifRoom" />
+</menu>

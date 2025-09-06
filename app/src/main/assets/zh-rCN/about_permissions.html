@@ -1,0 +1,46 @@
+<!--
+  SPDX-License-Identifier: GPL-3.0-or-later
+  SPDX-FileCopyrightText: 2016-2018, 2020-2023 Soren Stoutner <soren@stoutner.com>
+
+  Translation 2023 Xin.  Copyright assigned to Soren Stoutner <soren@stoutner.com>.
+
+  This file is part of Privacy Browser Android <https://www.stoutner.com/privacy-browser-android/>.
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License as published by the Free Software
+  Foundation, either version 3 of the License, or (at your option) any later
+  version.
+
+  This program is distributed in the hope that it will be useful, but WITHOUT
+  ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+  FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
+  details.
+
+  You should have received a copy of the GNU General Public License along with
+  this program.  If not, see <https://www.gnu.org/licenses/>. -->
+
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8">
+        <title>Permissions</title>
+
+        <link rel="stylesheet" href="../css/theme.css">
+
+        <!-- Setting the color scheme instructs the WebView to respect `prefers-color-scheme` @media CSS. -->
+        <meta name="color-scheme" content="light dark">
+    </head>
+
+    <body>
+        <h3>完整的网络访问权限</h3>
+        <p><a href="https://developer.android.com/reference/android/Manifest.permission.html#INTERNET">android.permission.INTERNET</a></p>
+        <p>网络访问权限是访问网页必需的，没有这个权限，Privacy Browser会成为“无浏览器”，把你的隐私从互联网隔离开。</p>
+
+        <h3>安装快捷方式</h3>
+        <p><a href="https://developer.android.com/reference/android/Manifest.permission.html#INSTALL_SHORTCUT">com.android.launcher.permission.<wbr>INSTALL_SHORTCUT</a></p>
+        <p>在桌面添加网页的快捷方式。</p>
+
+        <h3><a href="https://developer.android.com/about/versions/13/features#runtime-receivers">
+            de.audeon.browser.<wbr>standard.<wbr>DYNAMIC_<wbr>RECEIVER_<wbr>NOT_<wbr>EXPORTED_<wbr>PERMISSION</a></h3>
+        <p>自动添加到所有API33(安卓13)，防止其他应用在没有允许的情况下连接到动态接收器。</p>
+    </body>
+</html>

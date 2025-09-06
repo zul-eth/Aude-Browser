@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  Copyright 2016-2024 Soren Stoutner <soren@stoutner.com>.
+
+  This file is part of Privacy Browser Android <https://www.stoutner.com/privacy-browser-android/>.
+
+  Privacy Browser Android is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+
+  Privacy Browser Android is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with Privacy Browser Android.  If not, see <https://www.gnu.org/licenses/>. -->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/clear_and_exit"
+        android:title="@string/clear_and_exit"
+        android:icon="@drawable/download_with_external_app_enabled"
+        android:orderInCategory="10" />
+
+    <!-- If a group has an id, a line is drawn above it in the navigation view. -->
+    <group android:id="@+id/navigation_group" >
+        <item
+            android:id="@+id/home"
+            android:title="@string/home"
+            android:icon="@drawable/home"
+            android:orderInCategory="20" />
+
+        <item
+            android:id="@+id/back"
+            android:title="@string/back"
+            android:icon="@drawable/back"
+            android:orderInCategory="30" />
+
+        <item
+            android:id="@+id/forward"
+            android:title="@string/forward"
+            android:icon="@drawable/forward"
+            android:orderInCategory="40" />
+
+        <item
+            android:id="@+id/scroll_to_bottom"
+            android:title="@string/scroll_to_bottom"
+            android:icon="@drawable/move_to_bottom_enabled"
+            android:orderInCategory="50" />
+
+        <item
+            android:id="@+id/history"
+            android:title="@string/history"
+            android:icon="@drawable/history"
+            android:orderInCategory="60" />
+
+        <item
+            android:id="@+id/open"
+            android:title="@string/open"
+            android:icon="@drawable/proxy_enabled"
+            android:orderInCategory="70" />
+    </group>
+
+    <!-- If a group has an id, a line is drawn above it in the navigation view. -->
+    <group android:id="@+id/features_group" >
+        <item
+            android:id="@+id/requests"
+            android:title="@string/requests"
+            android:icon="@drawable/block_ads_enabled"
+            android:orderInCategory="80" />
+
+        <item
+            android:id="@+id/downloads"
+            android:title="@string/downloads"
+            android:icon="@drawable/download"
+            android:orderInCategory="90" />
+    </group>
+
+    <!-- If a group has an id, a line is drawn above it in the navigation view. -->
+    <group android:id="@+id/settings_group" >
+        <item
+            android:id="@+id/domains"
+            android:title="@string/domains"
+            android:icon="@drawable/domains"
+            android:orderInCategory="100" />
+
+        <item
+            android:id="@+id/settings"
+            android:title="@string/settings"
+            android:icon="@drawable/settings"
+            android:orderInCategory="110" />
+
+        <item
+            android:id="@+id/import_export"
+            android:title="@string/import_export"
+            android:icon="@drawable/import_export"
+            android:orderInCategory="120" />
+
+        <item
+            android:id="@+id/logcat"
+            android:title="@string/logcat"
+            android:icon="@drawable/clear_logcat_enabled"
+            android:orderInCategory="130" />
+
+        <item
+            android:id="@+id/webview_devtools"
+            android:title="@string/webview_devtools"
+            android:icon="@drawable/webview_devtools"
+            android:orderInCategory="140" />
+    </group>
+
+    <!-- If a group has an id, a line is drawn above it in the navigation view. -->
+    <group android:id="@+id/info_group" >
+
+        <item
+            android:id="@+id/about"
+            android:title="@string/about"
+            android:icon="@drawable/about_blue"
+            android:orderInCategory="160" />
+    </group>
+</menu>

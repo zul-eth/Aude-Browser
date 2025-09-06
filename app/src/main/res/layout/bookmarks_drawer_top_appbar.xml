@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  SPDX-License-Identifier: GPL-3.0-or-later
+  SPDX-FileCopyrightText: 2017-2020, 2022, 2024-2025 Soren Stoutner <soren@stoutner.com>
+
+  This file is part of Privacy Browser Android <https://www.stoutner.com/privacy-browser-android/>.
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License as published by the Free Software
+  Foundation, either version 3 of the License, or (at your option) any later
+  version.
+
+  This program is distributed in the hope that it will be useful, but WITHOUT
+  ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+  FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
+  details.
+
+  You should have received a copy of the GNU General Public License along with
+  this program.  If not, see <https://www.gnu.org/licenses/>. -->
+
+<FrameLayout
+    android:id="@+id/bookmarks_framelayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:layout_gravity="end" >
+
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="?android:attr/colorBackground" >
+
+        <!-- A compound drawable doesn't work well because only the image view should execute the `onClick()`. -->
+        <LinearLayout
+            android:id="@+id/bookmarks_header_linearlayout"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            tools:ignore="UseCompoundDrawables" >
+
+            <!-- Back arrow. -->
+            <ImageView
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:src="@drawable/back"
+                android:onClick="bookmarksBack"
+                android:contentDescription="@string/back" />
+
+            <!-- Bookmarks folder title. -->
+            <TextView
+                android:id="@+id/bookmarks_title_textview"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="?android:attr/textColorPrimary"
+                android:layout_margin="10dp" />
+
+            <!-- Pin. -->
+            <ImageView
+                android:id="@+id/bookmarks_drawer_pinned_imageview"
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingStart="15dp"
+                android:paddingEnd="20dp"
+                android:onClick="toggleBookmarksDrawerPinned"
+                android:contentDescription="@string/pin_drawer" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/bookmarks_drawer_listview"
+            android:layout_height="0dp"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:divider="@color/transparent"
+            android:dividerHeight="0dp" />
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/launch_bookmarks_activity_fab"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="155dp"
+        android:src="@drawable/bookmarks"
+        android:tint="@color/fab_icon"
+        android:contentDescription="@string/bookmarks" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/create_bookmark_folder_fab"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="85dp"
+        android:src="@drawable/create_folder"
+        android:tint="@color/fab_icon"
+        android:contentDescription="@string/create_folder" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/create_bookmark_fab"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:src="@drawable/create_bookmark"
+        android:tint="@color/fab_icon"
+        android:contentDescription="@string/create_bookmark" />
+</FrameLayout>

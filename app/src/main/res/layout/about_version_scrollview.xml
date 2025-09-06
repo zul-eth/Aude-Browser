@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  Copyright © 2016-2018,2020,2022-2023 Soren Stoutner <soren@stoutner.com>.
+
+  This file is part of Privacy Browser Android <https://www.stoutner.com/privacy-browser-android>.
+
+  Privacy Browser Android is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+
+  Privacy Browser Android is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with Privacy Browser Android.  If not, see <http://www.gnu.org/licenses android:layout_centerHorizontal="true" android:layout_marginTop="16dp"/>. -->
+
+<!-- The scroll view allows the linear layout to scroll if it exceeds the height of the page. -->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent" >
+
+    <!-- The background needs to be specified here so that it appears if about version is saved as an image. -->
+    <LinearLayout
+        android:id="@+id/about_version_linearlayout"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="?android:attr/colorBackground" >
+
+        <!-- The `RelativeLayout` contains the header. -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <!--`tools:ignore="RtlSymmetry"` suppressed the lint warning about adding `android:paddingStart`, which wouldn't work with this layout.
+                `tools:ignore="ContentDescription"` suppresses the lint warning about supplying a content description for the image view,
+                which isn't needed in this case because the image view is only decorative. -->
+
+            <TextView
+                android:id="@+id/audeon_browser_textview"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/audeon_browser"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:textColor="@color/blue_title_text"
+                android:paddingTop="12dp"
+                android:layout_toEndOf="@id/icon"  android:layout_centerHorizontal="true" android:layout_marginTop="16dp"/>
+
+            <TextView
+                android:id="@+id/version"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textColor="@color/alt_blue_text"
+                android:textIsSelectable="true"
+                android:layout_below="@id/audeon_browser_textview"
+                android:layout_toEndOf="@id/icon"  android:layout_centerHorizontal="true" android:layout_marginTop="16dp"/>
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="16dp"
+            android:paddingStart="4dp"
+            android:paddingEnd="0dp" >
+
+            <!-- Hardware. -->
+            <TextView
+                android:id="@+id/hardware"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/hardware"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="@color/blue_title_text" />
+
+            <TextView
+                android:id="@+id/brand"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textIsSelectable="true" />
+
+            <TextView
+                android:id="@+id/manufacturer"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textIsSelectable="true" />
+
+            <TextView
+                android:id="@+id/model"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textIsSelectable="true" />
+
+            <TextView
+                android:id="@+id/device"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textIsSelectable="true" />
+
+            <TextView
+                android:id="@+id/bootloader"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textIsSelectable="true" />
+
+            <TextView
+                android:id="@+id/radio"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textIsSelectable="true" />
+
+            <!-- Software. -->
+            <TextView
+                android:id="@+id/software"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/software"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="@color/blue_title_text"
+                android:paddingTop="12dp" />
+
+            <TextView
+                android:id="@+id/android"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textIsSelectable="true" />
+
+            <TextView
+                android:id="@+id/security_patch"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textIsSelectable="true" />
+
+            <TextView
+                android:id="@+id/build"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textIsSelectable="true" />
+
+            <TextView
+                android:id="@+id/kernel"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textIsSelectable="true" />
+
+            <TextView
+                android:id="@+id/webview_provider"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textIsSelectable="true" />
+
+            <TextView
+                android:id="@+id/webview_version"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textIsSelectable="true" />
+
+            <TextView
+                android:id="@+id/orbot"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textIsSelectable="true" />
+
+            <TextView
+                android:id="@+id/i2p"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textIsSelectable="true" />
+
+            <TextView
+                android:id="@+id/open_keychain"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textIsSelectable="true" />
+
+            <!-- Memory usage. -->
+            <TextView
+                android:id="@+id/memory_usage"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/memory_usage"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="@color/blue_title_text"
+                android:paddingTop="12dp" />
+
+            <TextView
+                android:id="@+id/app_consumed_memory"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textIsSelectable="true" />
+
+            <TextView
+                android:id="@+id/app_available_memory"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textIsSelectable="true" />
+
+            <TextView
+                android:id="@+id/app_total_memory"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textIsSelectable="true" />
+
+            <TextView
+                android:id="@+id/app_maximum_memory"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textIsSelectable="true" />
+
+            <TextView
+                android:id="@+id/system_consumed_memory"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textIsSelectable="true" />
+
+            <TextView
+                android:id="@+id/system_available_memory"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textIsSelectable="true" />
+
+            <TextView
+                android:id="@+id/system_total_memory"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textIsSelectable="true" />
+
+            <!-- Filter Lists. -->
+            <TextView
+                android:id="@+id/filterlists"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/filterlists"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="@color/blue_title_text"
+                android:paddingTop="12dp" />
+
+            <TextView
+                android:id="@+id/easylist"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textIsSelectable="true" />
+
+            <TextView
+                android:id="@+id/easyprivacy"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textIsSelectable="true" />
+
+            <TextView
+                android:id="@+id/fanboy_annoyance"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textIsSelectable="true" />
+
+            <TextView
+                android:id="@+id/fanboy_social"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textIsSelectable="true" />
+
+            <TextView
+                android:id="@+id/ultralist"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textIsSelectable="true" />
+
+            <TextView
+                android:id="@+id/ultraprivacy"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textIsSelectable="true" />
+
+            <!-- Package Signature. -->
+            <TextView
+                android:id="@+id/package_signature"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/package_signature"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="@color/blue_title_text"
+                android:paddingTop="12dp" />
+
+            <TextView
+                android:id="@+id/certificate_issuer_dn"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textIsSelectable="true" />
+
+            <TextView
+                android:id="@+id/certificate_subject_dn"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textIsSelectable="true" />
+
+            <TextView
+                android:id="@+id/certificate_start_date"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textIsSelectable="true" />
+
+            <TextView
+                android:id="@+id/certificate_end_date"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textIsSelectable="true" />
+
+            <TextView
+                android:id="@+id/certificate_version"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textIsSelectable="true" />
+
+            <TextView
+                android:id="@+id/certificate_serial_number"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textIsSelectable="true" />
+
+            <TextView
+                android:id="@+id/certificate_signature_algorithm"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textIsSelectable="true" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

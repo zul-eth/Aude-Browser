@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  Copyright 2016-2017, 2019, 2022-2024 Soren Stoutner <soren@stoutner.com>.
+
+  This file is part of Privacy Browser Android <https://www.stoutner.com/privacy-browser-android/>.
+
+  Privacy Browser Android is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+
+  Privacy Browser Android is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with Privacy Browser Android.  If not, see <http://www.gnu.org/licenses/>. -->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/list_selector" >
+
+    <!-- First row. -->
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="horizontal" >
+
+        <!-- Database ID. -->
+        <TextView
+            android:id="@+id/database_id_textview"
+            android:layout_height="wrap_content"
+            android:layout_width="50dp"
+            android:layout_marginEnd="10dp"
+            android:gravity="end"
+            android:textColor="@color/gray_500"
+            android:textSize="22sp" />
+
+        <!-- Favorite icon. -->
+        <ImageView
+            android:id="@+id/favorite_icon_imageview"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="10dp"
+            tools:ignore="ContentDescription" />
+
+        <!-- Name. -->
+        <TextView
+            android:id="@+id/name_textview"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textSize="22sp"
+            android:ellipsize="end"
+            android:lines="1" />
+
+        <!-- Folder ID. -->
+        <TextView
+            android:id="@+id/folder_id_textview"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textColor="@color/gray_500"
+            android:textSize="22sp"
+            android:ellipsize="end"
+            android:lines="1" />
+    </LinearLayout>
+
+    <!-- Second row - URL. -->
+    <TextView
+        android:id="@+id/url_textview"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginEnd="10dp"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textSize="22sp"
+        android:ellipsize="end"
+        android:lines="1" />
+
+    <!-- Third row. -->
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal" >
+
+        <!-- Display order. -->
+        <TextView
+            android:id="@+id/display_order_textview"
+            android:layout_height="wrap_content"
+            android:layout_width="50dp"
+            android:layout_marginEnd="10dp"
+            android:gravity="end"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textSize="22sp" />
+
+        <!-- Parent folder icon. -->
+        <ImageView
+            android:id="@+id/parent_folder_icon_imageview"
+            android:layout_height="30dp"
+            android:layout_width="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/folder_gray"
+            tools:ignore="ContentDescription" />
+
+        <!-- Parent folder name. -->
+        <TextView
+            android:id="@+id/parent_folder_textview"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="22sp"
+            android:textStyle="italic"
+            android:ellipsize="end"
+            android:lines="1" />
+    </LinearLayout>
+</LinearLayout>

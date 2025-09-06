@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  SPDX-License-Identifier: GPL-3.0-or-later
+  SPDX-FileCopyrightText: 2015-2024 Soren Stoutner <soren@stoutner.com>
+
+  This file is part of audeon browser Android <https://www.stoutner.com/privacy-browser-android/>.
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License as published by the Free Software
+  Foundation, either version 3 of the License, or (at your option) any later
+  version.
+
+  This program is distributed in the hope that it will be useful, but WITHOUT
+  ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+  FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
+  details.
+
+  You should have received a copy of the GNU General Public License along with
+  this program.  If not, see <https://www.gnu.org/licenses/>. -->
+
+<resources>
+    <!-- Activities. -->
+    <string name="audeon_browser">Audeon Browser</string>
+    <!-- For translations, `android_asset_path` should be the localization abbreviation.  This should not be translated unless the Guide and About sections are localized. -->
+    <string name="android_asset_path">tr</string>
+
+    <!-- MainWebView.  Android removes double spaces, but extra spaces can be manually specified with the Unicode `\u0020` formatting.
+        The `%1$s` code inserts variables into the displayed text and should be preserved in translation.  <https://developer.android.com/reference/kotlin/java/util/Formatter> -->
+    <string name="privacy_mode">Gizlilik Modu</string>
+    <string name="javascript_enabled">JavaScript etkin</string>
+    <string name="javascript_disabled">JavaScript devre dışı</string>
+    <string name="dom_storage_enabled">DOM Depolama etkin</string>
+    <string name="dom_storage_disabled">DOM Depolama devre dışı</string>
+    <string name="cookies_deleted">Çerezler silindi</string>
+    <string name="dom_storage_deleted">DOM Depolama silindi</string>
+    <string name="open_navigation_drawer">Gezinti Menüsünü aç</string>
+    <string name="close_navigation_drawer">Gezinti Menüsünü kapa</string>
+    <string name="unrecognized_url">Onaylanmamış URL:\u0020 %1$s</string>
+    <string name="add_tab">Sekme ekle</string>
+    <string name="close_tab">Sekmeyi kapa</string>
+    <string name="new_tab">Yeni sekme</string>
+    <string name="loading">Yükleniyor…</string>
+    <string name="error">Hata:\u0020 %1$s</string>
+
+    <!-- Loading Filter Lists. -->
+    <string name="loading_easylist">EasyList yükleniyor</string>
+    <string name="loading_easyprivacy">EasyPrivacy yükleniyor</string>
+    <string name="loading_fanboys_annoyance_list">Fanboy’s Annoyance List yükleniyor</string>
+    <string name="loading_fanboys_social_blocking_list">Fanboy’s Social Blocking List yükleniyor</string>
+    <string name="loading_ultralist">UltraList yükleniyor</string>
+    <string name="loading_ultraprivacy">UltraPrivacy yükleniyor</string>
+
+    <!-- Custom App Bar. -->
+    <string name="favorite_icon">Site Simgesi</string>
+    <string name="url_or_search_terms">URL veya Arama Terimleri</string>
+
+    <!-- View SSL Certificate. Android removes double spaces, but extra spaces can be manually specified with the Unicode `\u0020` formatting. -->
+    <string name="view_ssl_certificate">SSL Sertifika görüntüle</string>
+    <string name="unencrypted_website">Şifrelenmemiş web sitesi</string>
+    <string name="no_ssl_certificate">Bu web sitesiyle bağlantınız şifrelenmemiştir.
+        Bu durum üçüncü kişilere bilgilerinizi ele geçirme, bağlantınızı izleme ve zararlı yazılımları yükleme fırsatını verir.</string>
+    <string name="ssl_certificate">SSL Sertifika</string>
+    <string name="close">Kapat</string>
+    <string name="domain">Domain</string>
+    <string name="domain_label">Domain: \u0020</string>
+    <string name="ip_addresses">IP Adresleri: \u0020</string>
+    <string name="issued_to">Verilen</string>
+    <string name="issued_by">Veren</string>
+    <string name="common_name">Ortak Ad (CN): \u0020</string>
+    <string name="organization">Organizasyon (O): \u0020</string>
+    <string name="organizational_unit">Organizasyon Birimi (OU): \u0020</string>
+    <string name="valid_dates">Geçerli Tarihler</string>
+    <string name="start_date">Başlangıç Tarihi: \u0020</string>
+    <string name="end_date">Bitiş Tarihi: \u0020</string>
+
+    <!-- SSL Certificate Error.  Android removes double spaces, but extra spaces can be manually specified with the Unicode `\u0020` formatting. -->
+    <string name="ssl_certificate_error">SSL Sertifika Hatası</string>
+    <string name="proceed">İlerle</string>
+    <string name="future_certificate">Bu sertifika henüz geçerli değil</string>
+    <string name="expired_certificate">Bu sertifikanın süresi doldu</string>
+    <string name="cn_mismatch">Ortak ad ana makine adıyla eşleşmiyor</string>
+    <string name="untrusted">Bu sertifikanın sağlayıcısı güvenli değil</string>
+    <string name="invalid_date">Bu sertifikanın tarihi geçerli değil</string>
+    <string name="invalid_certificate">Bu sertifika geçerli değil</string>
+    <string name="url">URL</string>
+    <string name="url_label">URL: \u0020</string>
+
+    <!-- Pinned Mismatch. -->
+    <string name="pinned_mismatch">Sabit Uyumsuzluğu</string>
+    <string name="update">Güncelle</string>
+    <string name="current">Geçerli</string>
+    <string name="pinned">Sabit</string>
+
+    <!-- HTTP Authentication. Android removes double spaces, but extra spaces can be manually specified with the Unicode `\u0020` formatting. -->
+    <string name="http_authentication">HTTP Kimlik Doğrulama</string>
+    <string name="host">Ana makine: \u0020</string>
+    <string name="username">Kullanıcı Adı</string>
+    <string name="password">Şifre</string>
+
+    <!-- Main Navigation Menu. -->
+    <string name="navigation_drawer">Gezinti Menüsü</string>
+    <string name="clear_and_exit">Temizle ve Çık</string>
+    <string name="home">Anasayfa</string>
+    <string name="back">Geri</string>
+    <string name="forward">İleri</string>
+    <string name="history">Geçmiş</string>
+        <string name="clear_history">Geçmişi temizle</string>
+    <string name="downloads">İndirilenler</string>
+    <string name="settings">Ayarlar</string>
+    <string name="import_export">İçeri aktar/Dışarı aktar</string>
+    <string name="logcat">Logcat</string>
+    <string name="guide">Rehber</string>
+    <string name="about">Hakkında</string>
+
+    <!-- MainWebViewActivity Options Menu. -->
+    <string name="javascript">JavaScript</string>
+    <string name="refresh">Yenile</string>
+    <string name="stop">Dur</string>
+    <string name="dom_storage">DOM Depolama</string>
+    <string name="clear_data">Veriyi temizle</string>
+        <string name="clear_cookies">Çerezleri temizle</string>
+        <string name="clear_dom_storage">DOM Depolamayı temizle</string>
+        <string name="options_fanboys_annoyance_list">Fanboy’s Annoyance List</string>
+        <string name="options_fanboys_social_blocking_list">Fanboy’s Social Blocking List</string>
+        <string name="options_block_all_third_party_requests">Tüm Üçüncü Taraf İstekleri engelle</string>
+    <string name="page">Sayfa</string>
+        <string name="options_user_agent">Kullanıcı aracısı</string>
+            <string name="user_agent_audeon_browser">audeon browser</string>
+            <string name="user_agent_webview_default">Varsayılan WebView</string>
+            <string name="user_agent_firefox_on_android">Firefox - Android</string>
+            <string name="user_agent_chrome_on_android">Chrome - Android</string>
+            <string name="user_agent_safari_on_ios">Safari - iOS</string>
+            <string name="user_agent_firefox_on_linux">Firefox - Linux</string>
+            <string name="user_agent_chromium_on_linux">Chromium - Linux</string>
+            <string name="user_agent_firefox_on_windows">Firefox - Windows</string>
+            <string name="user_agent_chrome_on_windows">Chrome - Windows</string>
+            <string name="user_agent_edge_on_windows">Microsoft Edge - Windows</string>
+            <string name="user_agent_safari_on_macos">Safari - macOS</string>
+            <string name="user_agent_custom">Özel</string>
+        <string name="swipe_to_refresh_options_menu">Yenilemek için kaydır</string>
+        <string name="wide_viewport">Geniş ekran</string>
+        <string name="display_images">Resimleri göster</string>
+        <string name="font_size">Yazı Tipi Boyutu</string>
+        <string name="find_on_page">Sayfada bul</string>
+        <string name="print">Yazdır</string>
+            <string name="audeon_browser_webpage">audeon browser Web Sayfası</string>
+        <string name="save">Kaydet</string>
+        <string name="add_to_home_screen">Ana ekrana ekle</string>
+        <string name="view_source">Kaynağı görüntüle</string>
+    <string name="share">Paylaş</string>
+        <string name="share_url">URL\'yi paylaş</string>
+        <string name="open_with_app">Uygulamayla aç</string>
+        <string name="open_with_browser">Tarayıcıyla aç</string>
+    <string name="add_domain_settings">Domain ayarları ekle</string>
+    <string name="edit_domain_settings">Domain ayarlarını düzenle</string>
+
+    <!-- Context Menus. -->
+    <string name="open_in_new_tab">Yeni sekmede aç</string>
+    <string name="open_image_in_new_tab">Resmi Yeni Sekmede Aç</string>
+    <string name="copy_url">URL\'yi kopyala</string>
+    <string name="email_address">E-posta adresi</string>
+    <string name="copy_email_address">E-posta adresini kopyala</string>
+    <string name="write_email">E-posta yaz</string>
+    <string name="view_image">Resmi görüntüle</string>
+
+    <!-- Find on Page. -->
+    <string name="previous">Önceki</string>
+    <string name="next">Sonraki</string>
+
+    <!-- Save Dialog.  Android removes double spaces, but extra spaces can be manually specified with the Unicode `\u0020` formatting.
+        The `%*$s` code inserts variables into the displayed text and should be preserved in translation.  <https://developer.android.com/reference/kotlin/java/util/Formatter> -->
+    <string name="save_image">Resmi kaydet</string>
+    <string name="file_name">Dosya adı</string>
+    <string name="unknown_size">Bilinmeyen boyut</string>
+
+    <!-- View Headers. Android removes double spaces, but extra spaces can be manually specified with the Unicode `\u0020` formatting.
+        The `%1$s` code inserts variables into the displayed text and should be preserved in translation.  <https://developer.android.com/reference/kotlin/java/util/Formatter> -->
+    <string name="colon">: \u0020</string>
+    <string name="request_headers">İstek Başlıkları</string>
+    <string name="response_message">Yanıt Mesajı</string>
+    <string name="response_headers">Yanıt Başlıkları</string>
+    <string name="response_body">Yanıt Metni</string>
+    <string name="about_view_headers_message">Android WebView kaynak bilgisini gösteremediğinden, bu etkinlikte gösterilen bilgiyi toplamak için sistem araçları kullanılarak ayrı bir istek yapıldı.
+        Elde edilen veri ile ana etkinlikteki WebView\'ın kullandığı veri arasında farklılıklar olabilir. Bu sorun, 4.x serisinde Privacy WebView sürümüyle ortadan kalkacaktır.</string>
+
+    <!-- Create Home Screen Shortcut Alert Dialog. -->
+    <string name="create_shortcut">Kısayol oluştur</string>
+    <string name="shortcut_name">Kısayol adı</string>
+    <string name="open_with_default_browser">Varsayılan tarayıcıyla aç</string>
+    <string name="open_with_audeon_browser">audeon browser ile aç</string>
+    <string name="cancel">Vazgeç</string>
+    <string name="create">Oluştur</string>
+
+    <!-- Bookmarks. -->
+    <string name="bookmarks">Yer imleri</string>
+    <string name="database_view">Veri tabanı görünümü</string>
+    <string name="create_bookmark">Yer imi oluştur</string>
+    <string name="create_folder">Klasör oluştur</string>
+    <string name="current_bookmark_icon">Geçerli yer imi simgesi</string>
+    <string name="current_folder_icon">Geçerli klasör simgesi</string>
+    <string name="default_folder_icon">Varsayılan klasör simgesi</string>
+    <string name="webpage_favorite_icon">Web sayfa site simgesi</string>
+    <string name="bookmark_name">Yer imi adı</string>
+    <string name="folder_name">Klasör adı</string>
+    <string name="bookmark_url">Yer imi URL\'si</string>
+    <string name="edit_bookmark">Yer imi düzenle</string>
+    <string name="edit_folder">Klasörü düzenle</string>
+    <string name="move_to_folder">Klasöre taşı</string>
+    <string name="move">Taşı</string>
+
+    <!-- Bookmarks Contextual App Bar.  Android removes double spaces, but extra spaces can be manually specified with the Unicode `\u0020` formatting.
+        The `%1$d` code inserts variables into the displayed text and should be preserved in translation.  <https://developer.android.com/reference/kotlin/java/util/Formatter> -->
+    <string name="selected">Seçili:\u0020 %1$d</string>
+    <string name="move_up">Yukarı taşı</string>
+    <string name="move_down">Aşağı taşı</string>
+    <string name="edit">Düzenle</string>
+    <string name="delete">Sil</string>
+    <string name="select_all">Hepsini seç</string>
+    <string name="bookmarks_deleted">Yer imleri silindi:\u0020 %1$d</string>
+    <string name="undo">Geri al</string>
+
+    <!-- Bookmarks Database View. -->
+    <string name="bookmarks_database_view">Yer imleri veri tabanı görünümü</string>
+    <string name="all_folders">Tüm klasörler</string>
+    <string name="home_folder">Ana klasör</string>
+    <string name="sort">Sırala</string>
+        <string name="sorted_by_database_id">Veri tabanı kimliğine göre sıralandı</string>
+        <string name="sorted_by_display_order">Görüntüleme düzenine göre sıralandı</string>
+    <string name="database_id">Veritabanı kimliği:</string>
+    <string name="folder">Klasör:</string>
+    <string name="parent_folder">Üst klasör:</string>
+    <string name="display_order">Görüntüleme düzeni:</string>
+    <string name="cannot_deselect_bookmark">Üst klasör seçiliyken bir yer iminin seçimi kaldırılamaz.</string>
+
+    <!-- Requests.  The `%1$d` code inserts variables into the displayed text and should be preserved in translation.  <https://developer.android.com/reference/kotlin/java/util/Formatter> -->
+    <string name="requests">İstekler</string>
+    <string name="request_details">İstek detayları</string>
+    <string name="disposition">Eğilim</string>
+        <string name="all">Tüm</string>
+        <string name="default_label">Varsayılan</string>
+        <string name="default_allowed">Varsayılan - İzin verildi</string>
+        <string name="allowed">İzin verildi</string>
+        <string name="request_allowed">%1$d. İzin verildi</string>
+        <string name="allowed_plural">İzin verildi</string>
+        <string name="third_party_plural">Üçüncü Taraflar</string>
+        <string name="third_party_blocked">Üçüncü Taraf - Engellendi</string>
+        <string name="blocked">Engellendi</string>
+        <string name="request_blocked">%1$d. Engellendi</string>
+        <string name="blocked_plural">Engellendi</string>
+    <string name="sublist">Alt liste</string>
+
+    <!-- Domains. -->
+    <string name="domains">Domainler</string>
+    <string name="domain_settings">Domain ayarları</string>
+    <string name="add_domain">Domain ekle</string>
+    <string name="domain_name_already_exists">Domain adı önceden alınmış</string>
+    <string name="add">Ekle</string>
+    <string name="domain_name">Domain adı</string>
+    <string name="domain_deleted">Domain silinmiş</string>
+    <string name="domain_name_instructions">*. tüm altdomainleri içeren bir domainin başına getirilebilir (örn. *.stoutner.com)</string>
+    <string-array name="font_size_array">
+        <item>Sistem varsayılanı</item>
+        <item>Custom font size</item>
+    </string-array>
+    <string-array name="swipe_to_refresh_array">
+        <item>Sistem varsayılanı</item>
+        <item>Yenilemek için kaydır etkin</item>
+        <item>Yenilemek için kaydır devre dışı</item>
+    </string-array>
+    <string-array name="wide_viewport_array">
+        <item>Sistem varsayılanı</item>
+        <item>Geniş ekran etkin</item>
+        <item>Geniş ekran devre dışı</item>
+    </string-array>
+    <string-array name="display_webpage_images_array">
+        <item>Sistem varsayılanı</item>
+        <item>Görseller etkin</item>
+        <item>Görseller devre dışı</item>
+    </string-array>
+    <string name="pinned_ssl_certificate">Sabit SSL sertifika</string>
+        <string name="saved_ssl_certificate">Kayıtlı SSL sertifika</string>
+        <string name="current_website_ssl_certificate">Geçerli web site SSL sertifikası</string>
+        <string name="load_an_encrypted_website">Geçerli web site SSL sertifikasını doldurmak için Domain Ayarlarını açmadan önce şifrelenmiş bir web sitesi yükleyin.</string>
+    <string name="pinned_ip_addresses">Sabit IP adresleri</string>
+        <string name="saved_ip_addresses">Kayıtlı IP adresleri</string>
+        <string name="current_ip_addresses">Geçerli IP adresleri</string>
+
+    <!-- Import/Export.  Android removes double spaces, but extra spaces can be manually specified with the Unicode `\u0020` formatting.
+      The `%1$s` code inserts variables into the displayed text and should be preserved in translation.  <https://developer.android.com/reference/kotlin/java/util/Formatter> -->
+    <string name="encryption">Şifreleme</string>
+    <string-array name="encryption_type">
+        <item>Hiçbiri</item>
+        <item>Parola</item>
+        <item>OpenPGP</item>
+    </string-array>
+    <string name="openkeychain_required">OpenPGP şifrelemesinin çalışması için OpenKeychain yüklü olmalıdır.</string>
+    <string name="openkeychain_import_instructions">Şifresi çözüldükten sonra, şifrelenmemiş dosya ayrı bir adımda içeri aktarılmak zorundadır.</string>
+    <string name="file_location">Dosya Konumu</string>
+    <string name="browse">Gözat</string>
+    <string name="export">Dışarı aktar</string>
+    <string name="import_button">İçeri aktar</string>  <!-- `import` is a reserved word and cannot be used as the name. -->
+    <string name="decrypt">Şifre çöz (Decrypt)</string>
+    <string name="export_successful">Dışa aktarım başarılı</string>
+    <string name="export_failed">Dışa aktarım başarısız:\u0020 %1$s</string>
+    <string name="import_failed">İçe aktarım başarısız:\u0020 %1$s</string>
+
+    <!-- Logcat.  Android removes double spaces, but extra spaces can be manually specified with the Unicode `\u0020` formatting.
+        The `%1$s` code inserts variables into the displayed text and should be preserved in translation.  <https://developer.android.com/reference/kotlin/java/util/Formatter> -->
+    <string name="copy_string">Kopyala</string>
+    <string name="clear">Temizle</string>
+    <string name="logcat_copied">Logcat kopyalandı.</string>
+    <string name="audeon_browser_logcat_txt">audeon browser Android %1$s Logcat.txt</string>
+
+    <!-- Guide. -->
+    <string name="overview">Genel Bakış</string>
+    <string name="local_storage">Yerel Depolama</string>
+    <string name="ssl_certificates">SSL Sertifikaları</string>
+    <string name="tracking_ids">İzleme Kimlikleri</string>
+
+    <!-- Orbot. -->
+    <string name="waiting_for_orbot">Orbot\'un bağlanması bekleniyor.</string>
+
+    <!-- About Activity.  Android removes double spaces, but extra spaces can be manually specified with the Unicode `\u0020` formatting.
+        The `%*$*` code inserts variables into the displayed text and should be preserved in translation.  <https://developer.android.com/reference/kotlin/java/util/Formatter> -->
+    <string name="about_audeon_browser">About Audeon Browser</string>
+    <string name="version">Versiyon</string>
+        <string name="version_code">Versiyon %1$s (versiyon kodu %2$d)</string>
+        <string name="hardware">Donanım</string>
+            <string name="brand">Marka: \u0020</string>
+            <string name="manufacturer">Üretici: \u0020</string>
+            <string name="model">Model: \u0020</string>
+            <string name="device">Cihaz: \u0020</string>
+            <string name="bootloader">Bootloader: \u0020</string>
+            <string name="radio">Donanım Yazılımı: \u0020</string>
+        <string name="software">Yazılım</string>
+            <string name="android">Android: \u0020</string>
+            <string name="api">%1$s (API %2$d)</string>
+            <string name="security_patch">Güvenlik Yaması: \u0020</string>
+            <string name="build">Derleme: \u0020</string>
+            <string name="webview_provider">WebView Sağlayıcısı: \u0020</string>
+            <string name="webview_version">WebView Versiyonu: \u0020</string>
+            <string name="orbot">Orbot:</string>
+            <string name="openkeychain">OpenKeychain: \u0020</string>
+            <string name="easylist_label">EasyList: \u0020</string>
+            <string name="easyprivacy_label">EasyPrivacy: \u0020</string>
+            <string name="fanboys_annoyance_label">Fanboy’s Annoyance List: \u0020</string>
+            <string name="fanboys_social_label">Fanboy’s Social Blocking List: \u0020</string>
+            <string name="ultralist_label">UltraList: \u0020</string>
+            <string name="ultraprivacy_label">UltraPrivacy: \u0020</string>
+        <string name="package_signature">Paket İmzası</string>
+            <string name="issuer_dn">Yayınlayan DN: \u0020</string>
+            <string name="subject_dn">Özne DN: \u0020</string>
+            <string name="certificate_version">Sertifika Versiyonu: \u0020</string>
+            <string name="serial_number">Seri Numarası: \u0020</string>
+            <string name="signature_algorithm">İmza Algoritması: \u0020</string>
+    <string name="permissions">İzinler</string>
+    <string name="privacy_policy">Privacy Politikası</string>
+    <string name="changelog">Değişiklik Günlüğü</string>
+    <string name="licenses">Lisanslar</string>
+    <string name="contributors">Katkıda Bulunanlar</string>
+
+    <!-- Preferences. -->
+    <string name="privacy">Gizlilik</string>
+        <string name="javascript_preference_summary">JavaScript, web sitelerin cihazdaki programları (scriptler) çalıştırmasına izin verir.</string>
+        <string name="dom_storage_preference">DOM depolama</string>
+        <string name="user_agent">Kullanıcı aracısı</string>
+        <string-array name="translated_user_agent_names">
+            <item>audeon browser</item>
+            <item>Varsayılan WebView</item>
+            <item>Firefox - Android</item>
+            <item>Chrome - Android</item>
+            <item>Safari - iOS</item>
+            <item>Firefox - Linux</item>
+            <item>Chromium - Linux</item>
+            <item>Firefox - Windows</item>
+            <item>Chrome - Windows</item>
+            <item>Microsoft Edge - Windows</item>
+            <item>Safari - macOS</item>
+            <item>Özel</item>
+        </string-array>
+        <string-array name="translated_domain_settings_user_agent_names">  <!-- The translated names of the user agents with a System Default option for the domains spinner. -->
+            <item>Sistem varsayılanı</item>
+            <item>audeon browser</item>
+            <item>Varsayılan WebView</item>
+            <item>Firefox - Android</item>
+            <item>Chrome - Android</item>
+            <item>Safari - iOS</item>
+            <item>Firefox - Linux</item>
+            <item>Chromium - Linux</item>
+            <item>Firefox - Windows</item>
+            <item>Chrome - Windows</item>
+            <item>Microsoft Edge - Windows</item>
+            <item>Safari - macOS</item>
+            <item>Özel</item>
+        </string-array>
+        <string name="custom_user_agent">Özel kullanıcı aracısı</string>
+        <string name="incognito_mode">Gizli Mod</string>
+        <string name="incognito_mode_summary">Her web sayfasının yüklenmesi bittikten sonra geçmişi ve önbelleği temizler. In Incognito Mode, back closes the tab (or the app if there is only one tab).</string>
+        <string name="allow_screenshots">Ekran görüntülerine izin ver</string>
+        <string name="allow_screenshots_summary">Ekran görüntülerine, video kaydına ve güvenli olmayan ekranlarda görüntülenmeye izin verir.
+            Bu ayarı değiştirmek audeon browser uygulamasını yeniden başlatır.</string>
+        <string name="easylist">EasyList</string>
+        <string name="easyprivacy">EasyPrivacy</string>
+        <string name="fanboys_annoyance_list">Fanboy’s Annoyance List</string>
+        <string name="fanboys_social_blocking_list">Fanboy’s Social Blocking List</string>
+        <string name="ultralist">UltraList</string>
+        <string name="ultraprivacy">UltraPrivacy</string>
+        <string name="block_all_third_party_requests">Tüm üçüncü taraf istekleri engelle</string>
+        <string name="block_all_third_party_requests_summary">Tüm üçüncü taraf istekleri engellemek gizliliği arttırır, fakat çoğu web sitesinin çökmesine sebep olur.</string>
+    <string name="url_modification">URL Modifikasyonu</string>
+    <string name="search">Arama</string>
+        <string-array name="search_entries">
+            <item>Mojeek</item>
+            <item>Audeon</item>
+            <item>MetaGer</item>
+            <item>Google</item>
+            <item>Bing</item>
+            <item>Yahoo</item>
+            <item>Özel sayfa</item>
+        </string-array>
+        <string name="custom_url">Özel sayfa</string>
+        <string name="search_custom_url">Özel sayfa ara</string>
+    <string name="full_screen">Tam Ekran</string>
+        <string name="full_screen_browsing_mode">Tam ekran modu</string>
+        <string name="full_screen_browsing_mode_summary">Tam ekran moduna geçmek için çift dokun.</string>
+        <string name="hide_app_bar">Uygulama çubuğunu gizle</string>
+        <string name="hide_app_bar_summary">URL içeren uygulama çubuğunu gizler.</string>
+    <string name="clear_everything">Her şeyi temizle</string>
+        <string name="clear_everything_summary">Çerezleri, DOM depolamayı, ve WebView ön belleğini temizler. Sonrasında, manuel olarak bütün “app_webview” ve “cache” dizinlerini siler.</string>
+        <string name="clear_cookies_preference">Çerezleri temizle</string>
+        <string name="clear_dom_storage_preference">DOM Depolamayı temizle</string>
+        <string name="clear_dom_storage_summary">DOM Depolamayı temizler.</string>
+        <string name="clear_cache">Önbelleği temizle</string>
+        <string name="clear_cache_summary">WebView önbelleğini temizler.</string>
+    <string name="general">Genel</string>
+        <string name="homepage">Ana Sayfa</string>
+        <string name="font_size_preference">Yazı tipi boyutu</string>
+        <string name="open_intents_in_new_tab">Intent\'leri yeni sekmede aç</string>
+        <string name="open_intents_in_new_tab_summary">Intent\'ler diğer uygulamalardan gönderilen linklerdir.</string>
+        <string name="swipe_to_refresh">Yenilemek için kaydır</string>
+        <string name="swipe_to_refresh_summary">Bazı web siteleri, yenilemek için kaydır seçeneği etkin olduğunda iyi çalışmayabilir.</string>
+        <string name="scroll_app_bar">Uygulama çubuğunu kaydır</string>
+        <string name="scroll_app_bar_summary">WebView aşağı kaydırıldığında, ekranın üst kısmından uygulama çubuğunu kaydırır.</string>
+        <string name="display_additional_app_bar_icons">Ek uygulama çubuğu simgelerini göster</string>
+        <string name="wide_viewport_preference">Geniş ekran</string>
+        <string name="wide_viewport_summary">Geniş ekran kullanmak, bazı web sayfalarının düzenini masaüstü versiyonları gibi yapar.</string>
+        <string name="display_webpage_images">Web sayfasının görsellerini göster</string>
+        <string name="display_webpage_images_summary">Bant genişliği korumasını devre dışı bırakır.</string>
+</resources>

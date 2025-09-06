@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  Copyright 2016-2019, 2021-2024 Soren Stoutner <soren@stoutner.com>.
+
+  This file is part of Privacy Browser Android <https://www.stoutner.com/privacy-browser-android>.
+
+  Privacy Browser Android is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+
+  Privacy Browser Android is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with Privacy Browser Android.  If not, see <http://www.gnu.org/licenses/>. -->
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools" >
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical" >
+
+        <!-- Default folder icon. -->
+        <LinearLayout
+            android:id="@+id/default_folder_icon_linearlayout"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="6dp" >
+
+            <RadioButton
+                android:id="@+id/default_folder_icon_radiobutton"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:checked="true" />
+
+            <ImageView
+                android:id="@+id/default_folder_icon_imageview"
+                android:layout_height="30dp"
+                android:layout_width="30dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/folder_blue_bitmap"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="7dp"
+                android:layout_gravity="center_vertical"
+                android:text="@string/default_folder_icon"
+                android:textSize="18sp"
+                android:textColor="?android:textColorPrimary" />
+        </LinearLayout>
+
+        <!-- Webpage favorite icon. -->
+        <LinearLayout
+            android:id="@+id/webpage_favorite_icon_linearlayout"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="6dp" >
+
+            <RadioButton
+                android:id="@+id/webpage_favorite_icon_radiobutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical" />
+
+            <ImageView
+                android:id="@+id/webpage_favorite_icon_imageview"
+                android:layout_height="30dp"
+                android:layout_width="30dp"
+                android:layout_gravity="center_vertical"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="7dp"
+                android:layout_gravity="center_vertical"
+                android:text="@string/webpage_favorite_icon"
+                android:textSize="18sp"
+                android:textColor="?android:textColorPrimary" />
+        </LinearLayout>
+
+        <!-- Custom icon. -->
+        <LinearLayout
+            android:id="@+id/custom_icon_linearlayout"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="6dp" >
+
+            <RadioButton
+                android:id="@+id/custom_icon_radiobutton"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center_vertical" />
+
+            <ImageView
+                android:id="@+id/custom_icon_imageview"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="7dp"
+                android:layout_gravity="center_vertical"
+                android:text="@string/custom_folder_icon"
+                android:textSize="18sp"
+                android:textColor="?android:textColorPrimary" />
+        </LinearLayout>
+
+        <!-- Browse button. -->
+        <Button
+            android:id="@+id/browse_button"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/browse"
+            android:layout_marginBottom="12dp" />
+
+        <!-- The text input layout makes the `android:hint` float above the edit text. -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginTop="6dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp" >
+
+            <!-- `android:imeOptions="actionGo"` sets the keyboard to have a "go" key instead of a "new line" key.  `android:inputType="textUri"` disables spell check in the EditText. -->
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/folder_name_edittext"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:hint="@string/folder_name"
+                android:imeOptions="actionGo"
+                android:inputType="textUri" >
+                <requestFocus />
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+</ScrollView>

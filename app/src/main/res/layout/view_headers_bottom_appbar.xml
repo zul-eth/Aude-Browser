@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  SPDX-License-Identifier: GPL-3.0-or-later
+  SPDX-FileCopyrightText: 2017-2024 Soren Stoutner <soren@stoutner.com>
+
+  This file is part of Privacy Browser Android <https://www.stoutner.com/privacy-browser-android/>.
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License as published by the Free Software
+  Foundation, either version 3 of the License, or (at your option) any later
+  version.
+
+  This program is distributed in the hope that it will be useful, but WITHOUT
+  ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+  FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
+  details.
+
+  You should have received a copy of the GNU General Public License along with
+  this program.  If not, see <https://www.gnu.org/licenses/>. -->
+
+<!-- `android:fitsSystemWindows="true"` is required for correct layout starting with API >= 35 (Android 15) -->
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:id="@+id/coordinatorlayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:fitsSystemWindows="true" >
+
+    <!-- The linear layout with `orientation="vertical"` keeps the content above the app bar layout.  `app:layout_dodgeInsetEdges="bottom"` as a child of a coordinator layout moves the view above snackbars. -->
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        app:layout_dodgeInsetEdges="bottom" >
+
+        <!-- The frame layout allows the swipe refresh layout and the progress bar to occupy the same space. -->
+        <FrameLayout
+            android:layout_height="0dp"
+            android:layout_width="match_parent"
+            android:layout_weight="1" >
+
+            <!-- `android:layout_weight="1"` causes the swipe refresh layout to fill all the remaining space. -->
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/swiperefreshlayout"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent" >
+
+                <ScrollView
+                    android:id="@+id/scrollview"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" >
+
+                    <LinearLayout
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_margin="10dp" >
+
+                        <!-- SSL information. -->
+                        <TextView
+                            android:id="@+id/ssl_information_title_textview"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:text="@string/ssl_information"
+                            android:textAlignment="center"
+                            android:textSize="18sp"
+                            android:textColor="@color/blue_text"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/ssl_information_textview"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:textIsSelectable="true"
+                            android:layout_marginBottom="8dp" />
+
+                        <!-- SSL Buttons. -->
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/ssl_buttons_constraintlayout"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_marginBottom="16dp"
+                            tools:ignore="MissingConstraints" >
+
+                            <androidx.constraintlayout.helper.widget.Flow
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                app:constraint_referenced_ids="ciphers_button,certificate_button"
+                                app:flow_wrapMode="chain"
+                                app:flow_firstHorizontalStyle="packed"
+                                app:flow_horizontalGap="15dp" />
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/ciphers_button"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:text="@string/ciphers"
+                                android:onClick="showCiphers"
+                                app:backgroundTint="@color/button_background_selector"
+                                android:textColor="@color/white"
+                                tools:ignore="ButtonStyle" />
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/certificate_button"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:text="@string/certificate"
+                                android:onClick="showCertificate"
+                                app:backgroundTint="@color/button_background_selector"
+                                android:textColor="@color/white"
+                                tools:ignore="ButtonStyle" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <!-- Request headers. -->
+                        <TextView
+                            android:id="@+id/request_headers_title_textview"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:text="@string/request_headers"
+                            android:textAlignment="center"
+                            android:textSize="18sp"
+                            android:textColor="@color/blue_text"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/request_headers_textview"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:textIsSelectable="true"
+                            android:layout_marginBottom="8dp" />
+
+                        <!-- Response message. -->
+                        <TextView
+                            android:id="@+id/response_message_title_textview"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:text="@string/response_message"
+                            android:textAlignment="center"
+                            android:textSize="18sp"
+                            android:textColor="@color/blue_text"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/response_message_textview"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:textIsSelectable="true"
+                            android:layout_marginBottom="8dp" />
+
+                        <!-- Response headers. -->
+                        <!-- The title text is set programatically. -->
+                        <TextView
+                            android:id="@+id/response_headers_title_textview"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:textAlignment="center"
+                            android:textSize="18sp"
+                            android:textColor="@color/blue_text"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/response_headers_textview"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:textIsSelectable="true"
+                            android:layout_marginBottom="8dp" />
+
+                        <!-- Response body. -->
+                        <!-- The title text is set programatically. -->
+                        <TextView
+                            android:id="@+id/response_body_title_textview"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:textAlignment="center"
+                            android:textSize="18sp"
+                            android:textColor="@color/blue_text"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/response_body_textview"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:textIsSelectable="true" />
+                    </LinearLayout>
+                </ScrollView>
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+            <!-- The progress bar looks best with a minimum height of 3dp for the top app bar and 4dp for the bottom app bar. -->
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_gravity="bottom"
+                android:minHeight="4dp"
+                android:progressTint="@color/blue_text"
+                android:progressBackgroundTint="@color/transparent"
+                android:background="?android:attr/colorBackground"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <!-- The app bar theme must be specified here because the activity uses a `NoActionBar` theme. -->
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:background="?android:attr/colorBackground"
+            android:theme="@style/audeonbrowserAppBar" >
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" />
+        </com.google.android.material.appbar.AppBarLayout>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

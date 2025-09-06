@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  Copyright 2017, 2019-2020, 2022, 2024 Soren Stoutner <soren@stoutner.com>.
+
+  This file is part of Privacy Browser Android <https://www.stoutner.com/privacy-browser-android>.
+
+  Privacy Browser Android is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+
+  Privacy Browser Android is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with Privacy Browser Android.  If not, see <http://www.gnu.org/licenses/>. -->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:orientation="vertical" >
+
+    <!-- The `TextInputLayout` makes the `android:hint` float above the `EditText`. -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp" >
+
+        <!-- `android:imeOptions="actionGo" sets the keyboard to have a `go` key instead of a `new line` key.  `android:inputType="textUri"` disables spell check in the `EditText`. -->
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/domain_name_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/domain_name"
+            android:imeOptions="actionGo"
+            android:inputType="textUri"
+            android:selectAllOnFocus="true" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- The domain name already exists textview is initially not visible. -->
+    <TextView
+        android:id="@+id/domain_name_already_exists_textview"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="@string/domain_name_already_exists"
+        android:textColor="@color/red_text"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:visibility="gone" />
+</LinearLayout>

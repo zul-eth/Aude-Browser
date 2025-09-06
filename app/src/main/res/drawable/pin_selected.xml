@@ -1,0 +1,36 @@
+<!--
+  SPDX-License-Identifier: GPL-3.0-or-later
+  SPDX-FileCopyrightText: 2019, 2022 Soren Stoutner <soren@stoutner.com>
+
+  This file is part of Privacy Browser Android <https://www.stoutner.com/privacy-browser-android/>.
+
+  It is derived from `push_pin_filled`, which is part of the Android Material icon set <https://fonts.google.com/icons>.  It is released under the Apache License 2.0.
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License as published by the Free Software
+  Foundation, either version 3 of the License, or (at your option) any later
+  version.
+
+  This program is distributed in the hope that it will be useful, but WITHOUT
+  ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+  FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
+  details.
+
+  You should have received a copy of the GNU General Public License along with
+  this program.  If not, see <https://www.gnu.org/licenses/>. -->
+
+<vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="24dp"
+    android:width="24dp"
+    android:viewportHeight="24"
+    android:viewportWidth="24" >
+
+    <path
+        android:fillColor="@color/selected_icon_background"
+        android:pathData="M3.153,0L20.847,0A3.153,3.153 0,0 1,24 3.153L24,20.847A3.153,3.153 0,0 1,20.847 24L3.153,24A3.153,3.153 0,0 1,0 20.847L0,3.153A3.153,3.153 0,0 1,3.153 0z" />
+
+    <path
+        android:fillColor="@color/icon"
+        android:pathData="m16,12 l2,2v2h-5v6l-1,1 -1,-1V16H6V14L8,12V5H7V3h10v2h-1z" />
+</vector>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  Copyright 2015-2019, 2022-2024 Soren Stoutner <soren@stoutner.com>.
+
+  This file is part of Privacy Browser Android <https://www.stoutner.com/privacy-browser-android/>.
+
+  Privacy Browser Android is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+
+  Privacy Browser Android is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with Privacy Browser Android.  If not, see <http://www.gnu.org/licenses/>. -->
+
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:paddingEnd="10dp"
+        android:src="@drawable/menu"
+        android:contentDescription="@string/navigation_drawer"
+        android:onClick="openNavigationDrawer"
+        tools:ignore="RtlSymmetry" />
+
+    <!-- A relative layout is used instead of a linear layout because the app bar does not let `android:layout_weight="1"` cause the URL text bar to fill all the available space.
+    Placing the edit text inside a relative layout also draws a line under the edit text. -->
+    <RelativeLayout
+    android:id="@+id/url_relativelayout"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:orientation="horizontal" >
+
+    <!-- `android:imeOptions="actionGo"` sets the keyboard to have a go key instead of a new line key.  `android:inputType="textUri"` disables spell check in the `EditText`. -->
+    <EditText
+        android:id="@+id/url_edittext"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:hint="@string/url_or_search_terms"
+        android:imeOptions="actionGo"
+        android:inputType="textUri"
+        android:selectAllOnFocus="true"
+        android:autofillHints=""
+        android:padding="12dp"
+        android:background="@drawable/rounded_edittext" />
+    </RelativeLayout>
+</LinearLayout>

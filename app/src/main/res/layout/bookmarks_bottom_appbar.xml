@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  SPDX-License-Identifier: GPL-3.0-or-later
+  SPDX-FileCopyrightText: 2016-2022, 2024 Soren Stoutner <soren@stoutner.com>
+
+  This file is part of Privacy Browser Android <https://www.stoutner.com/privacy-browser-android/>.
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License as published by the Free Software
+  Foundation, either version 3 of the License, or (at your option) any later
+  version.
+
+  This program is distributed in the hope that it will be useful, but WITHOUT
+  ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+  FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
+  details.
+
+  You should have received a copy of the GNU General Public License along with
+  this program.  If not, see <https://www.gnu.org/licenses/>. -->
+
+<!-- `android:fitsSystemWindows="true"` is required for correct layout starting with API >= 35 (Android 15) -->
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:id="@+id/bookmarks_coordinatorlayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:fitsSystemWindows="true" >
+
+    <!-- The linear layout with `orientation="vertical"` keeps the content above the app bar layout.  `app:layout_dodgeInsetEdges="bottom"` as a child of a coordinator layout moves the view above snackbars. -->
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        app:layout_dodgeInsetEdges="bottom" >
+
+        <!-- `android:choiceMode="multipleChoiceModal"` allows the contextual action menu to select more than one item at a time.
+            `android:dividerHeight` must be at least `1dp` or the list view is inconsistent in calculating how many bookmarks are displayed. -->
+        <ListView
+            android:id="@+id/bookmarks_listview"
+            android:layout_height="0dp"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:choiceMode="multipleChoiceModal"
+            android:divider="@color/transparent"
+            android:dividerHeight="1dp" />
+
+        <!-- The app bar theme must be specified here because the activity uses a `NoActionBar` theme. -->
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/bookmarks_appbarlayout"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:background="?android:attr/colorBackground"
+            android:theme="@style/audeonbrowserAppBar" >
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/bookmarks_toolbar"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" />
+        </com.google.android.material.appbar.AppBarLayout>
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/create_bookmark_folder_fab"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="140dp"
+        android:src="@drawable/create_folder"
+        android:tint="@color/fab_icon"
+        android:contentDescription="@string/create_folder" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/create_bookmark_fab"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="70dp"
+        android:src="@drawable/create_bookmark"
+        android:tint="@color/fab_icon"
+        android:contentDescription="@string/create_bookmark" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

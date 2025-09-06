@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  Copyright 2015-2024 Soren Stoutner <soren@stoutner.com>.
+
+  This file is part of Privacy Browser Android <https://www.stoutner.com/privacy-browser-android>.
+
+  Privacy Browser Android is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+
+  Privacy Browser Android is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with Privacy Browser Android.  If not, see <http://www.gnu.org/licenses/>. -->
+
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activities.MainWebViewActivity" >
+
+    <item
+        android:id="@+id/javascript"
+        android:title="@string/javascript"
+        android:orderInCategory="100"
+        android:icon="@drawable/privacy_mode"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/refresh"
+        android:title="@string/refresh"
+        android:orderInCategory="200"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/bookmarks"
+        android:title="@string/bookmarks"
+        android:orderInCategory="300"
+        android:icon="@drawable/bookmarks"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/cookies"
+        android:title="@string/cookies"
+        android:orderInCategory="400"
+        android:checkable="true"
+        android:icon="@drawable/cookies_disabled"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/dom_storage"
+        android:title="@string/dom_storage"
+        android:orderInCategory="600"
+        android:checkable="true"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/clear_data"
+        android:title="@string/clear_data"
+        android:orderInCategory="700"
+        app:showAsAction="never" >
+
+        <menu>
+            <item
+                android:id="@+id/clear_cookies"
+                android:title="@string/clear_cookies"
+                android:orderInCategory="710"
+                app:showAsAction="never" />
+
+            <item
+                android:id="@+id/clear_dom_storage"
+                android:title="@string/clear_dom_storage"
+                android:orderInCategory="720"
+                app:showAsAction="never" />
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/filterlists"
+        android:title="@string/filterlists"
+        android:orderInCategory="800"
+        app:showAsAction="never" >
+
+        <menu>
+            <item
+                android:id="@+id/easylist"
+                android:title="@string/easylist"
+                android:orderInCategory="810"
+                android:checkable="true"
+                app:showAsAction="never" />
+
+            <item
+                android:id="@+id/easyprivacy"
+                android:title="@string/easyprivacy"
+                android:orderInCategory="820"
+                android:checkable="true"
+                app:showAsAction="never" />
+
+            <item
+                android:id="@+id/fanboys_annoyance_list"
+                android:title="@string/options_fanboys_annoyance_list"
+                android:orderInCategory="830"
+                android:checkable="true"
+                app:showAsAction="never" />
+
+            <item
+                android:id="@+id/fanboys_social_blocking_list"
+                android:title="@string/options_fanboys_social_blocking_list"
+                android:orderInCategory="840"
+                android:checkable="true"
+                app:showAsAction="never" />
+
+            <item
+                android:id="@+id/ultralist"
+                android:title="@string/ultralist"
+                android:orderInCategory="850"
+                android:checkable="true"
+                app:showAsAction="never" />
+
+            <item
+                android:id="@+id/ultraprivacy"
+                android:title="@string/ultraprivacy"
+                android:orderInCategory="860"
+                android:checkable="true"
+                app:showAsAction="never" />
+
+            <item
+                android:id="@+id/block_all_third_party_requests"
+                android:title="@string/options_block_all_third_party_requests"
+                android:orderInCategory="870"
+                android:checkable="true"
+                app:showAsAction="never" />
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/proxy"
+        android:title="@string/proxy"
+        android:orderInCategory="900"
+        app:showAsAction="never" >
+
+        <menu>
+            <group android:checkableBehavior="single" >
+                <item
+                    android:id="@+id/proxy_none"
+                    android:title="@string/proxy_none"
+                    android:orderInCategory="910"
+                    app:showAsAction="never" />
+
+                <item
+                    android:id="@+id/proxy_tor"
+                    android:title="@string/proxy_tor"
+                    android:orderInCategory="920"
+                    app:showAsAction="never" />
+
+                <item
+                    android:id="@+id/proxy_i2p"
+                    android:title="@string/proxy_i2p"
+                    android:orderInCategory="930"
+                    app:showAsAction="never" />
+
+                <item
+                    android:id="@+id/proxy_custom"
+                    android:title="@string/proxy_custom"
+                    android:orderInCategory="940"
+                    app:showAsAction="never" />
+            </group>
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/page"
+        android:title="@string/page"
+        android:orderInCategory="1000"
+        app:showAsAction="never" >
+
+        <menu>
+            <item
+                android:id="@+id/user_agent"
+                android:title="@string/options_user_agent"
+                android:orderInCategory="1010"
+                app:showAsAction="never" >
+
+                <menu>
+                    <group android:checkableBehavior="single">
+                        <item
+                            android:id="@+id/user_agent_audeon_browser"
+                            android:title="@string/user_agent_audeon_browser"
+                            android:orderInCategory="1011"
+                            app:showAsAction="never" />
+
+                        <item
+                            android:id="@+id/user_agent_webview_default"
+                            android:title="@string/user_agent_webview_default"
+                            android:orderInCategory="1012"
+                            app:showAsAction="never" />
+
+                        <item
+                            android:id="@+id/user_agent_firefox_on_android"
+                            android:title="@string/user_agent_firefox_on_android"
+                            android:orderInCategory="1013"
+                            app:showAsAction="never" />
+
+                        <item
+                            android:id="@+id/user_agent_chrome_on_android"
+                            android:title="@string/user_agent_chrome_on_android"
+                            android:orderInCategory="1014"
+                            app:showAsAction="never" />
+
+                        <item
+                            android:id="@+id/user_agent_safari_on_ios"
+                            android:title="@string/user_agent_safari_on_ios"
+                            android:orderInCategory="1015"
+                            app:showAsAction="never" />
+
+                        <item
+                            android:id="@+id/user_agent_firefox_on_linux"
+                            android:title="@string/user_agent_firefox_on_linux"
+                            android:orderInCategory="1016"
+                            app:showAsAction="never" />
+
+                        <item
+                            android:id="@+id/user_agent_chromium_on_linux"
+                            android:title="@string/user_agent_chromium_on_linux"
+                            android:orderInCategory="1017"
+                            app:showAsAction="never" />
+
+                        <item
+                            android:id="@+id/user_agent_firefox_on_windows"
+                            android:title="@string/user_agent_firefox_on_windows"
+                            android:orderInCategory="1018"
+                            app:showAsAction="never" />
+
+                        <item
+                            android:id="@+id/user_agent_chrome_on_windows"
+                            android:title="@string/user_agent_chrome_on_windows"
+                            android:orderInCategory="1019"
+                            app:showAsAction="never" />
+
+                        <item
+                            android:id="@+id/user_agent_edge_on_windows"
+                            android:title="@string/user_agent_edge_on_windows"
+                            android:orderInCategory="1020"
+                            app:showAsAction="never" />
+
+                        <item
+                            android:id="@+id/user_agent_safari_on_macos"
+                            android:title="@string/user_agent_safari_on_macos"
+                            android:orderInCategory="1021"
+                            app:showAsAction="never" />
+
+                        <item
+                            android:id="@+id/user_agent_custom"
+                            android:title="@string/user_agent_custom"
+                            android:orderInCategory="1022"
+                            app:showAsAction="never" />
+                    </group>
+                </menu>
+            </item>
+
+            <item
+                android:id="@+id/swipe_to_refresh"
+                android:title="@string/swipe_to_refresh_options_menu"
+                android:orderInCategory="1030"
+                android:checkable="true"
+                app:showAsAction="never" />
+
+            <item
+                android:id="@+id/wide_viewport"
+                android:title="@string/wide_viewport"
+                android:orderInCategory="1040"
+                android:checkable="true"
+                app:showAsAction="never" />
+
+            <item
+                android:id="@+id/display_images"
+                android:title="@string/display_images"
+                android:orderInCategory="1050"
+                android:checkable="true"
+                app:showAsAction="never" />
+
+            <item
+                android:id="@+id/dark_webview"
+                android:title="@string/dark_webview"
+                android:orderInCategory="1060"
+                android:checkable="true"
+                app:showAsAction="never" />
+
+            <item
+                android:id="@+id/font_size"
+                android:title="@string/font_size"
+                android:orderInCategory="1070"
+                app:showAsAction="never" />
+
+            <item
+                android:id="@+id/find_on_page"
+                android:title="@string/find_on_page"
+                android:orderInCategory="1080"
+                app:showAsAction="never|collapseActionView" />
+
+            <item
+                android:id="@+id/print"
+                android:title="@string/print"
+                android:orderInCategory="1090"
+                app:showAsAction="never" />
+
+            <item
+                android:id="@+id/save"
+                android:title="@string/save"
+                android:orderInCategory="1100"
+                app:showAsAction="never" >
+
+                <menu>
+                    <item
+                        android:id="@+id/save_url"
+                        android:title="@string/save_url"
+                        android:orderInCategory="1101"
+                        app:showAsAction="never" />
+
+                    <item
+                        android:id="@+id/save_archive"
+                        android:title="@string/save_archive"
+                        android:orderInCategory="1102"
+                        app:showAsAction="never" />
+
+                    <item
+                        android:id="@+id/save_image"
+                        android:title="@string/save_image"
+                        android:orderInCategory="1103"
+                        app:showAsAction="never" />
+                </menu>
+            </item>
+
+            <item
+                android:id="@+id/add_to_homescreen"
+                android:title="@string/add_to_home_screen"
+                android:orderInCategory="1110"
+                app:showAsAction="never" />
+
+            <item
+                android:id="@+id/view_source"
+                android:title="@string/view_source"
+                android:orderInCategory="1120"
+                app:showAsAction="never" />
+
+            <item
+                android:id="@+id/view_headers"
+                android:title="@string/view_headers"
+                android:orderInCategory="1130"
+                app:showAsAction="never" />
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/share"
+        android:title="@string/share"
+        android:orderInCategory="1200"
+        app:showAsAction="never" >
+
+        <menu>
+            <item
+                android:id="@+id/share_message"
+                android:title="@string/share_message"
+                android:orderInCategory="1210"
+                app:showAsAction="never" />
+
+            <item
+                android:id="@+id/share_url"
+                android:title="@string/share_url"
+                android:orderInCategory="1220"
+                app:showAsAction="never" />
+
+            <item
+                android:id="@+id/open_with_app"
+                android:title="@string/open_with_app"
+                android:orderInCategory="1230"
+                app:showAsAction="never" />
+
+            <item
+                android:id="@+id/open_with_browser"
+                android:title="@string/open_with_browser"
+                android:orderInCategory="1240"
+                app:showAsAction="never" />
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/add_or_edit_domain"
+        android:title="@string/add_domain_settings"
+        android:orderInCategory="1300"
+        app:showAsAction="never" />
+        
+    <item
+        android:id="@+id/action_profiles"
+        android:title="@string/menu_profiles"
+        android:orderInCategory="1400"
+        app:showAsAction="never" />
+</menu>

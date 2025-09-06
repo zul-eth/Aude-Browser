@@ -1,0 +1,32 @@
+<!--
+  SPDX-License-Identifier: GPL-3.0-or-later
+  SPDX-FileCopyrightText: 2025 Soren Stoutner <soren@stoutner.com>
+
+  This file is part of Privacy Browser Android <https://www.stoutner.com/privacy-browser-android/>.
+
+  It is a modified version of `vertical_align_bottom_rounded_fill0_weight400_grade0_24px`, which is part of the Android Material icon set and is released under the Apache License 2.0 <https://fonts.google.com/icons>.
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License as published by the Free Software
+  Foundation, either version 3 of the License, or (at your option) any later
+  version.
+
+  This program is distributed in the hope that it will be useful, but WITHOUT
+  ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+  FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
+  details.
+
+  You should have received a copy of the GNU General Public License along with
+  this program.  If not, see <https://www.gnu.org/licenses/>. -->
+
+<vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="24dp"
+    android:width="24dp"
+    android:viewportHeight="960"
+    android:viewportWidth="960" >
+
+    <path
+        android:fillColor="@color/icon"
+        android:pathData="M200,840q-17,0 -28.5,-11.5T160,800q0,-17 11.5,-28.5T200,760h560q17,0 28.5,11.5T800,800q0,17 -11.5,28.5T760,840L200,840ZM480,663q-8,0 -15,-2.5t-13,-8.5L308,508q-11,-11 -11,-28t11,-28q11,-11 28,-11t28,11l76,76v-368q0,-17 11.5,-28.5T480,120q17,0 28.5,11.5T520,160v368l76,-76q11,-11 28,-11t28,11q11,11 11,28t-11,28L508,652q-6,6 -13,8.5t-15,2.5Z" />
+</vector>

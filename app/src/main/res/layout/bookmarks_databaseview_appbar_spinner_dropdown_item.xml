@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  Copyright 2017-2020,2022-2023 Soren Stoutner <soren@stoutner.com>.
+
+  This file is part of Privacy Browser Android <https://www.stoutner.com/privacy-browser-android>.
+
+  Privacy Browser Android is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+
+  Privacy Browser Android is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with Privacy Browser Android.  If not, see <http://www.gnu.org/licenses/>. -->
+
+<com.audeon.browser.views.CheckedLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:orientation="horizontal" >
+
+    <!-- Subfolder spacer. -->
+    <TextView
+        android:id="@+id/subfolder_spacer_textview"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="10dp" />
+
+    <!-- Folder icon. -->
+    <ImageView
+        android:id="@+id/folder_icon_imageview"
+        android:layout_height="30dp"
+        android:layout_width="30dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="10dp"
+        tools:ignore="contentDescription" />
+
+    <!-- Folder name.  A checked text view allows the color of the text to be changed when it is selected (checked). -->
+    <CheckedTextView
+        android:id="@+id/folder_name_textview"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:lines="1"
+        android:ellipsize="end"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:textSize="18sp"
+        android:textColor="@color/checked_text_selector" />
+</com.audeon.browser.views.CheckedLinearLayout>

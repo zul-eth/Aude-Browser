@@ -1,0 +1,10 @@
+[Adblock Plus 2.0]
+! Version: 1
+! Title: UltraList
+! Last modified: 27 Apr 2023 18:57 UTC
+! Expires: 90 days (update frequency)
+! Homepage: https://www.stoutner.com/privacy-browser-android/filter-lists/ultralist/
+! Licence: GPLv3+ http://www.gnu.org/licenses/gpl-3.0.html
+!
+! There should be no `adservice` on my system.  <https://redmine.stoutner.com/issues/450>
+adservice

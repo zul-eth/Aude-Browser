@@ -1,0 +1,41 @@
+<!--
+  SPDX-License-Identifier: GPL-3.0-or-later
+  SPDX-FileCopyrightText: 2016-2017, 2021-2023 Soren Stoutner <soren@stoutner.com>
+
+  This file is part of Privacy Browser Android <https://www.stoutner.com/privacy-browser-android/>.
+
+  It is derived from `security` and `language`, which are part of the Android Material icon set <https://fonts.google.com/icons>.  They are released under the Apache License 2.0.
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License as published by the Free Software
+  Foundation, either version 3 of the License, or (at your option) any later
+  version.
+
+  This program is distributed in the hope that it will be useful, but WITHOUT
+  ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+  FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
+  details.
+
+  You should have received a copy of the GNU General Public License along with
+  this program.  If not, see <https://www.gnu.org/licenses/>. -->
+
+<vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:height="108dp"
+    android:width="108dp"
+    android:viewportHeight="120"
+    android:viewportWidth="120" >
+
+    <group
+        android:scaleX="0.4888889"
+        android:scaleY="0.4888889"
+        android:translateX="30.666666"
+        android:translateY="30.666666" >
+
+        <path
+          android:fillColor="@color/black"
+          android:pathData="M60,0 L10.91,21.82L10.91,54.55c0,30.27 20.95,58.58 49.09,65.45C88.15,113.13 109.09,84.82 109.09,54.55L109.09,21.82ZM59.96,22.6c20.68,0 37.44,16.75 37.44,37.4 0,20.64 -16.75,37.4 -37.44,37.4 -20.64,0 -37.36,-16.75 -37.36,-37.4 0,-20.64 16.72,-37.4 37.36,-37.4zM60,30.23c-3.1,4.49 -5.54,9.46 -7.14,14.81h14.29c-1.61,-5.35 -4.04,-10.32 -7.14,-14.81zM50.31,31.73c-6.88,2.36 -12.6,7.11 -16.19,13.31h11.03c1.2,-4.67 2.92,-9.16 5.16,-13.31zM69.69,31.73c2.24,4.15 3.96,8.64 5.16,13.31L85.88,45.04C82.29,38.87 76.57,34.08 69.69,31.73ZM31.05,52.52c-0.6,2.39 -0.97,4.9 -0.97,7.48 0,2.58 0.37,5.09 0.97,7.48h12.64c-0.3,-2.47 -0.52,-4.94 -0.52,-7.48 0,-2.54 0.22,-5.01 0.52,-7.48zM51.25,52.52c-0.34,2.43 -0.6,4.94 -0.6,7.48 0,2.54 0.26,5.01 0.6,7.48h17.5c0.34,-2.47 0.6,-4.94 0.6,-7.48 0,-2.54 -0.26,-5.05 -0.6,-7.48zM76.31,52.52c0.3,2.47 0.52,4.94 0.52,7.48 0,2.54 -0.22,5.01 -0.52,7.48h12.64c0.6,-2.39 0.97,-4.9 0.97,-7.48 0,-2.58 -0.37,-5.09 -0.97,-7.48zM34.12,74.96c3.59,6.21 9.31,10.96 16.19,13.31C48.07,84.12 46.35,79.63 45.15,74.96ZM52.86,74.96c1.61,5.35 4.04,10.32 7.14,14.81 3.1,-4.49 5.54,-9.46 7.14,-14.81zM74.85,74.96c-1.2,4.67 -2.92,9.16 -5.16,13.31 6.88,-2.36 12.6,-7.14 16.19,-13.31z"
+            tools:ignore="VectorPath" />
+    </group>
+</vector>

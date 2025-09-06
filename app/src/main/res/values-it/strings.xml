@@ -1,0 +1,702 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  SPDX-License-Identifier: GPL-3.0-or-later
+  SPDX-FileCopyrightText: 2017-2024 Soren Stoutner <soren@stoutner.com>
+
+  Translation 2017-2024 Francesco Buratti.  Copyright assigned to Soren Stoutner <soren@stoutner.com>.
+
+  This file is part of audeon browser Android <https://www.stoutner.com/privacy-browser-android/>.
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License as published by the Free Software
+  Foundation, either version 3 of the License, or (at your option) any later
+  version.
+
+  This program is distributed in the hope that it will be useful, but WITHOUT
+  ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+  FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
+  details.
+
+  You should have received a copy of the GNU General Public License along with
+  this program.  If not, see <https://www.gnu.org/licenses/>. -->
+
+<resources>
+    <!-- Activities. -->
+    <string name="audeon_browser">Audeon Browser</string>
+    <string name="short_name">Audeon</string>
+    <!-- For translations, `android_asset_path` should be the localization abbreviation.  This should not be translated unless the Guide and About sections are localized. -->
+    <string name="android_asset_path">it</string>
+
+    <!-- MainWebView.  Android removes double spaces, but extra spaces can be manually specified with the Unicode `\u0020` formatting.
+        The `%1$s` code inserts variables into the displayed text and should be preserved in translation.  <https://developer.android.com/reference/kotlin/java/util/Formatter> -->
+    <string name="privacy_mode">Modalità privata</string>
+    <string name="javascript_enabled">JavaScript abilitato</string>
+    <string name="javascript_disabled">JavaScript disabilitato</string>
+    <string name="cookies_enabled">Cookies abilitati</string>
+    <string name="cookies_disabled">Cookies disabilitati</string>
+    <string name="dom_storage_enabled">DOM Storage abilitato</string>
+    <string name="dom_storage_disabled">DOM Storage disabilitato</string>
+    <string name="cookies_deleted">Cookies eliminati</string>
+    <string name="dom_storage_deleted">DOM Storage eliminato</string>
+    <string name="open_navigation_drawer">Apri il menu di navigazione</string>
+    <string name="close_navigation_drawer">Chiudi il menu di navigazione</string>
+    <string name="pin_drawer">Fissa il cassetto</string>
+    <string name="unrecognized_url">URL non riconosciuta:\u0020 %1$s</string>
+    <string name="add_tab">Aggiungi Scheda</string>
+    <string name="close_tab">Chiudi Scheda</string>
+    <string name="new_tab">Nuova Scheda</string>
+    <string name="loading">Caricamento…</string>
+    <string name="error">Errore:\u0020 %1$s</string>
+    <string name="apply">Applica</string>
+
+    <!-- Loading Filter Lists. -->
+    <string name="loading_easylist">Caricamento EasyList</string>
+    <string name="loading_easyprivacy">Caricamento EasyPrivacy</string>
+    <string name="loading_fanboys_annoyance_list">Caricamento Fanboy’s Annoyance List</string>
+    <string name="loading_fanboys_social_blocking_list">Caricamento Fanboy’s Social Blocking List</string>
+    <string name="loading_ultralist">Caricamento UltraList</string>
+    <string name="loading_ultraprivacy">Caricamento UltraPrivacy</string>
+
+    <!-- Custom App Bar. -->
+    <string name="favorite_icon">FavIcon</string>
+    <string name="url_or_search_terms">Digita URL o Ricerca</string>
+
+    <!-- View SSL Certificate. Android removes double spaces, but extra spaces can be manually specified with the Unicode `\u0020` formatting. -->
+    <string name="view_ssl_certificate">Visualizza il certificato SSL</string>
+    <string name="unencrypted_website">Sito non criptato</string>
+    <string name="no_ssl_certificate">La comunicazione con questo sito web non è criptata. Questo consente a terze parti la possibilità di intercettare le informazioni scambiate,
+        di tracciare la navigazione e di inviare contenuto maligno.</string>
+    <string name="content_url">Content URL</string>
+    <string name="content_url_message">Le Content URL sono dati caricati sul proprio dispositivo da altre app.</string>
+    <string name="ssl_certificate">Certificato SSL</string>
+    <string name="close">Chiudi</string>
+    <string name="domain">Dominio</string>
+    <string name="domain_label">Dominio: \u0020</string>
+    <string name="ip_addresses">Indirizzi IP: \u0020</string>
+    <string name="issued_to">Emesso a</string>
+    <string name="issued_by">Emesso da</string>
+    <string name="common_name">Nome comune (NC): \u0020</string>
+    <string name="organization">Organizzazione (O): \u0020</string>
+    <string name="organizational_unit">Unità organizzativa (UO): \u0020</string>
+    <string name="valid_dates">Date valide</string>
+    <string name="start_date">Data di inizio: \u0020</string>
+    <string name="end_date">Data finale: \u0020</string>
+
+    <!-- SSL Certificate Error.  Android removes double spaces, but extra spaces can be manually specified with the Unicode `\u0020` formatting. -->
+    <string name="ssl_certificate_error">Errore certificato SSL</string>
+    <string name="proceed">Continua</string>
+    <string name="future_certificate">La data di inizio del certificato è nel futuro</string>
+    <string name="expired_certificate">Il certificato è scaduto</string>
+    <string name="cn_mismatch">Il nome comune non coincide con il nome dell\'host</string>
+    <string name="untrusted">L\'autorità di certificazione non è fidata</string>
+    <string name="invalid_date">La data del certificato non è valida</string>
+    <string name="invalid_certificate">Il certificato non è valido</string>
+    <string name="url">URL</string>
+    <string name="url_label">URL: \u0020</string>
+
+    <!-- Pinned Mismatch. -->
+    <string name="pinned_mismatch">Discrepanza certificato</string>
+    <string name="update">Aggiorna</string>
+    <string name="current">Attuale</string>
+    <string name="pinned">Appuntato</string>
+
+    <!-- HTTP Authentication. Android removes double spaces, but extra spaces can be manually specified with the Unicode `\u0020` formatting. -->
+    <string name="http_authentication">Autenticazione HTTP</string>
+    <string name="host">Host: \u0020</string>
+    <string name="username">Nome utente</string>
+    <string name="password">Password</string>
+
+    <!-- Main Navigation Menu. -->
+    <string name="navigation_drawer">Menù di navigazione</string>
+    <string name="clear_and_exit">Elimina dati ed esci</string>
+    <string name="home">Home</string>
+    <string name="back">Indietro</string>
+    <string name="forward">Avanti</string>
+    <string name="scroll_to_bottom">Vai alla fine</string>
+        <string name="scroll_to_top">Vai all\'inizio</string>
+    <string name="history">Cronologia</string>
+        <string name="clear_history">Elimina cronologia</string>
+    <string name="open">Apri</string>
+    <string name="downloads">Download</string>
+        <string name="no_file_manager_detected">Il sistema non riesce a trovare un file manager compatibile.</string>
+    <string name="settings">Impostazioni</string>
+    <string name="import_export">Importa/Esporta</string>
+    <string name="logcat">Logcat</string>
+    <string name="webview_devtools">WebView DevTools</string>
+    <string name="guide">Guida</string>
+    <string name="about">Informazioni</string>
+
+    <!-- MainWebViewActivity Options Menu. -->
+    <string name="javascript">JavaScript</string>
+    <string name="refresh">Aggiorna</string>
+    <string name="stop">Stop</string>
+    <string name="cookies">Cookies</string>
+    <string name="dom_storage">DOM storage</string>
+    <string name="clear_data">Elimina dati</string>
+        <string name="clear_cookies">Elimina cookies</string>
+        <string name="clear_dom_storage">Elimina DOM storage</string>
+        <string name="options_fanboys_annoyance_list">Fanboy’s annoyance list</string>
+        <string name="options_fanboys_social_blocking_list">Fanboy’s social blocking list</string>
+        <string name="options_block_all_third_party_requests">Blocca tutte le richieste di Terze Parti</string>
+    <string name="page">Pagina</string>
+        <string name="options_user_agent">User agent</string>
+            <string name="user_agent_audeon_browser">audeon browser</string>
+            <string name="user_agent_webview_default">WebView Default</string>
+            <string name="user_agent_firefox_on_android">Firefox su Android</string>
+            <string name="user_agent_chrome_on_android">Chrome su Android</string>
+            <string name="user_agent_safari_on_ios">Safari su iOS</string>
+            <string name="user_agent_firefox_on_linux">Firefox su Linux</string>
+            <string name="user_agent_chromium_on_linux">Chromium su Linux</string>
+            <string name="user_agent_firefox_on_windows">Firefox su Windows</string>
+            <string name="user_agent_chrome_on_windows">Chrome su Windows</string>
+            <string name="user_agent_edge_on_windows">Edge su Windows</string>
+            <string name="user_agent_safari_on_macos">Safari su macOS</string>
+            <string name="user_agent_custom">Personalizzato</string>
+        <string name="swipe_to_refresh_options_menu">Swipe per aggiornare</string>
+        <string name="wide_viewport">Finestra grande</string>
+        <string name="display_images">Mostra immagini</string>
+        <string name="dark_webview">Dark WebView</string>
+        <string name="font_size">Dimensione font</string>
+        <string name="find_on_page">Cerca nella pagina</string>
+        <string name="print">Stampa</string>
+            <string name="audeon_browser_webpage">Pagina web di audeon browser</string>
+        <string name="save">Salva</string>
+        <string name="add_to_home_screen">Aggiungi collegamento</string>
+        <string name="view_source">Visualizza sorgente</string>
+        <string name="view_rendered_website">Visualizza il sito renderizzato</string>
+        <string name="view_headers">Visualizza Intestazioni</string>
+    <string name="share">Condividi</string>
+        <string name="share_message">Condividi messaggio</string>
+        <string name="share_url">Condividi URL</string>
+        <string name="open_with_app">Apri con app</string>
+        <string name="open_with_browser">Apri con il browser</string>
+    <string name="add_domain_settings">Aggiungi dominio</string>
+    <string name="edit_domain_settings">Modifica dominio</string>
+
+    <!-- Context Menus. -->
+    <string name="open_in_new_tab">Apri in una nuova Scheda</string>
+    <string name="open_in_background">Apri in Background</string>
+    <string name="open_image_in_new_tab">Apri l\'immagine in una nuova scheda</string>
+    <string name="share_image">Condividi Immagine</string>
+    <string name="copy_url">Copia URL</string>
+    <string name="copy_text">Copia Testo</string>
+    <string name="email_address">Indirizzo Email</string>
+    <string name="copy_email_address">Copia Indirizzo Email</string>
+    <string name="write_email">Scrivi Email</string>
+    <string name="view_image">Apri Immagine</string>
+
+    <!-- Find on Page. -->
+    <string name="previous">Precedente</string>
+    <string name="next">Successivo</string>
+
+    <!-- Open Dialog. -->
+    <string name="file_is_mht">Questo file è un archivio web MHT.</string>
+    <string name="mht_checkbox_explanation">Talvolta gli archivi web del tipo MIME Encapsulated HTML (MHT) devono essere specificati manualmente per essere aperti correttamente.</string>
+
+    <!-- Save Dialog.  Android removes double spaces, but extra spaces can be manually specified with the Unicode `\u0020` formatting.  `%%` writes a literal `%`.
+        The `%*$s` code inserts variables into the displayed text and should be preserved in translation.  <https://developer.android.com/reference/kotlin/java/util/Formatter> -->
+    <string name="save_url">Salva URL</string>
+    <string name="save_archive">Salva Archivio</string>
+    <string name="save_text">Salva Testo</string>
+    <string name="save_image">Salva Immagine</string>
+    <string name="file_name">Nome File</string>
+    <string name="file">File</string>
+    <string name="bytes">byte</string>
+    <string name="unknown_size">Dimensione sconosciuta</string>
+    <string name="invalid_url">URL non valida</string>
+    <string name="blob_url_warning">In questo momento audeon browser non può scaricare blob URL.</string>
+    <string name="data_url_warning">Il gestore dei download di Android non può gestire le URL dati.</string>
+    <string name="download_directory">Cartella dei Download</string>
+    <string name="documents">Documenti</string>
+    <string name="pictures">Immagini</string>
+    <string name="music">Musica</string>
+    <string name="saving_file">Salvataggio file:\u0020 %1$d%% - %2$s</string>
+    <string name="saving_file_progress">Salvataggio file:\u0020 %1$s byte - %2$s</string>
+    <string name="saving_file_percentage_progress">Salvataggio file:\u0020 %1$d%% - %2$s byte / %3$s byte - %4$s</string>
+    <string name="saved">%1$s salvato.</string>
+    <string name="download_cancelled">Download cancellato.</string>
+    <string name="processing_image">Creazione immagine:\u0020 %1$s</string>
+    <string name="error_saving_file">Error di salvataggio di %1$s:\u0020 %2$s</string>
+    <string name="unknown_error">Errore sconosciuto</string>
+
+    <!-- View Headers. Android removes double spaces, but extra spaces can be manually specified with the Unicode `\u0020` formatting.
+        The `%1$s` code inserts variables into the displayed text and should be preserved in translation.  <https://developer.android.com/reference/kotlin/java/util/Formatter> -->
+    <string name="colon">: \u0020</string>
+    <string name="ssl_information">Informazioni SSL</string>
+    <string name="applied_cipher">Cifratura Applicata</string>
+    <string name="peer_principal">Peer Principale</string>
+    <string name="certificate_type">Tipo di Certificato</string>
+    <string name="certificate_hash_code">Hash Code del Certificato</string>
+    <string name="ciphers">Cifrature</string>
+    <string name="available_ciphers">Cifrature Disponibili</string>
+    <string name="certificate">Certificato</string>
+    <string name="request_headers">Richiesta Intestazioni</string>
+    <string name="response_message">Messaggio di Risposta</string>
+    <string name="response_headers">Risposta Intestazioni</string>
+    <string name="response_body">Testo della Risposta</string>
+    <string name="content_metadata">Content - Metadati</string>
+    <string name="content_data">Content - Dati</string>
+    <string name="untrusted_ssl_certificate">Il certificato SSL non è attendibile.</string>
+    <string name="load_anyway">Carica comunque</string>
+    <string name="about_view_headers">Info sulla visualizzazione delle Intestazioni</string>
+    <string name="about_view_headers_message">Dal momento che la WebView di Android non fornisce indicazioni sulla sorgente è stata effettuata una richiesta separata utilizzando i system tools in modo da
+        ottenere le informazioni mostrate. Potrebbero esserci alcune differenze tra questi dati e quelli utilizzati da WebView.
+        Questa limitazione sarà eliminata nella serie 4.x quando verrà rilasciata Privacy WebView.</string>
+    <string name="headers_copied">Intestazioni copiate.</string>
+    <string name="headers_txt">%1$s intestazioni.txt</string>
+
+    <!-- Create Home Screen Shortcut Alert Dialog. -->
+    <string name="create_shortcut">Crea Collegamento</string>
+    <string name="shortcut_name">Nome collegamento</string>
+    <string name="open_with_default_browser">Apri con il Browser predefinito.</string>
+    <string name="open_with_audeon_browser">Apri con audeon browser.</string>
+    <string name="cancel">Annulla</string>
+    <string name="create">Crea</string>
+
+    <!-- Bookmarks. -->
+    <string name="bookmarks">Segnalibri</string>
+    <string name="database_view">Vista Database</string>
+    <string name="create_bookmark">Crea Segnalibro</string>
+    <string name="create_folder">Crea Cartella</string>
+    <string name="current_bookmark_icon">Icona Segnalibro</string>
+    <string name="current_folder_icon">Icona Cartella</string>
+    <string name="custom_bookmark_icon">Icona segnalibro personalizzata</string>
+    <string name="custom_folder_icon">Icona cartella personalizzata</string>
+    <string name="default_folder_icon">Icona predefinita cartella</string>
+    <string name="webpage_favorite_icon">Icona preferita pagina web</string>
+    <string name="bookmark_name">Nome Segnalibro</string>
+    <string name="folder_name">Nome Cartella</string>
+    <string name="bookmark_url">URL Segnalibro</string>
+    <string name="edit_bookmark">Modifica Segnalibro</string>
+    <string name="edit_folder">Modifica Cartella</string>
+    <string name="move_to_folder">Sposta nella Cartella</string>
+    <string name="move">Sposta</string>
+    <string name="cannot_use_svg">Al momento i file SVG non possono essere utilizzati come icona dei segnalibri.</string>
+
+    <!-- Bookmarks Contextual App Bar.  Android removes double spaces, but extra spaces can be manually specified with the Unicode `\u0020` formatting.
+        The `%1$d` code inserts variables into the displayed text and should be preserved in translation.  <https://developer.android.com/reference/kotlin/java/util/Formatter> -->
+    <string name="selected">Selezionato:\u0020 %1$d</string>
+    <string name="move_up">Sposta sopra</string>
+    <string name="move_down">Sposta sotto</string>
+    <string name="move_to_top">Sposta in Alto</string>
+    <string name="move_to_bottom">Sposta in Basso</string>
+    <string name="edit">Modifica</string>
+    <string name="delete">Elimina</string>
+    <string name="select_all">Seleziona tutto</string>
+    <string name="bookmarks_deleted">Segnalibri eliminati:\u0020 %1$d</string>
+    <string name="undo">Annulla</string>
+
+    <!-- Bookmarks Database View. -->
+    <string name="bookmarks_database_view">Database dei Segnalibri</string>
+    <string name="all_folders">Tutte le cartelle</string>
+    <string name="home_folder">Cartella principale</string>
+    <string name="sort">Ordina</string>
+        <string name="sorted_by_database_id">Ordina per database ID.</string>
+        <string name="sorted_by_display_order">Ordina come visualizzato.</string>
+    <string name="database_id">ID Database:</string>
+    <string name="folder_id">ID Folder:</string>
+    <string name="folder_id_separator">\u0020 – %1$d</string>
+    <string name="folder">Cartella:</string>
+    <string name="parent_folder">Cartella superiore:</string>
+    <string name="display_order">Ordine di visualizzazione:</string>
+    <string name="cannot_deselect_bookmark">Non è possibile deselezionare un segnalibro mentre la cartella di appartenenza è selezionate.</string>
+
+    <!-- Requests.  The `%1$d` code inserts variables into the displayed text and should be preserved in translation.  <https://developer.android.com/reference/kotlin/java/util/Formatter> -->
+    <string name="requests">Richieste</string>
+    <string name="request_details">Dettagli sulle richieste</string>
+    <string name="disposition">Scelta</string>
+        <string name="all">Tutte</string>
+        <string name="default_label">Default</string>
+        <string name="default_allowed">Default - Permessa</string>
+        <string name="allowed">Permessa</string>
+        <string name="request_allowed">%1$d. Permessa</string>
+        <string name="allowed_plural">Permesse</string>
+        <string name="third_party_plural">Terze parti</string>
+        <string name="third_party_blocked">Terze parti - Bloccate</string>
+        <string name="blocked">Bloccata</string>
+        <string name="request_blocked">%1$d. Bloccata</string>
+        <string name="blocked_plural">Bloccate</string>
+    <string name="filterlist">Lista dei Filtri</string>
+    <string name="sublist">Sublist</string>
+        <string name="main_allowlist">Lista principale dei permessi</string>
+        <string name="final_allowlist">Lista finale dei permessi</string>
+        <string name="domain_allowlist">Lista domini permessi</string>
+        <string name="domain_initial_allowlist">Lista iniziale domini permessi</string>
+        <string name="domain_final_allowlist">Lista finale domini permessi</string>
+        <string name="third_party_allowlist">Lista di terze parti permesse</string>
+        <string name="third_party_domain_allowlist">Lista domini di terze parti permessi</string>
+        <string name="third_party_domain_initial_allowlist">Lista iniziale domini di terze parti permessi</string>
+        <string name="main_blocklist">Lista principale bloccati</string>
+        <string name="initial_blocklist">Lista iniziale bloccati</string>
+        <string name="final_blocklist">Lista finale bloccati</string>
+        <string name="domain_blocklist">Lista domini bloccati</string>
+        <string name="domain_initial_blocklist">Lista iniziale domini bloccati</string>
+        <string name="domain_final_blocklist">Lista finale domini bloccati</string>
+        <string name="domain_regular_expression_blocklist">Lista di blocco espressioni regolari nei domini</string>
+        <string name="third_party_blocklist">Lista di terze parti bloccate</string>
+        <string name="third_party_initial_blocklist">Lista iniziale di terze parti bloccate</string>
+        <string name="third_party_domain_blocklist">Lista domini di terze parti bloccati</string>
+        <string name="third_party_domain_initial_blocklist">Lista iniziale domini di terze parti bloccati</string>
+        <string name="third_party_regular_expression_blocklist">Lista di blocco espressioni regolari di terze parti</string>
+        <string name="third_party_domain_regular_expression_blocklist">Lista di blocco espressioni regolari domini di terze parti</string>
+        <string name="regular_expression_blocklist">Lista di blocco espressioni regolari</string>
+    <string name="filterlist_entries">Elementi della lista dei filtri</string>
+    <string name="filterlist_original_entry">Elemento originale della lista dei filtri</string>
+
+    <!-- Domains. -->
+    <string name="domains">Domini</string>
+    <string name="domain_settings">Impostazioni Domini</string>
+    <string name="add_domain">Aggiungi Dominio</string>
+    <string name="domain_name_already_exists">Il nome del Dominio è già esistente</string>
+    <string name="add">Aggiungi</string>
+    <string name="delete_all">Elimina tutto</string>
+    <string name="delete_all_domain_settings">Eliminare tutte le impostaizoni dei domini?</string>
+    <string name="domain_name">Nome del Dominio</string>
+    <string name="domain_deleted">Dominio Eliminato</string>
+    <string name="all_domains_deleted">Eliminati tutti i domini</string>
+    <string name="domain_name_instructions">è possibile anteporre *. a un dominio per includere tutti i sottodomini (es. *.stoutner.com)</string>
+    <string-array name="javascript_array">
+        <item>Default di Sistema</item>
+        <item>JavaScript abilitato</item>
+        <item>JavaScript disabilitato</item>
+    </string-array>
+    <string-array name="cookies_array">
+        <item>Default di Sistema</item>
+        <item>Cookies abilitati</item>
+        <item>Cookies disabilitati</item>
+    </string-array>
+    <string-array name="dom_storage_array">
+        <item>Default di Sistema</item>
+        <item>DOM storage abilitato</item>
+        <item>DOM storage disabilitato</item>
+    </string-array>
+    <string-array name="easylist_array">
+        <item>Default di Sistema</item>
+        <item>EasyList abilitata</item>
+        <item>EasyList disabilitata</item>
+    </string-array>
+    <string-array name="easyprivacy_array">
+        <item>Default di Sistema</item>
+        <item>EasyPrivacy abilitata</item>
+        <item>EasyPrivacy disabilitata</item>
+    </string-array>
+    <string-array name="fanboys_annoyance_list_array">
+        <item>Default di Sistema</item>
+        <item>Fanboy’s Annoyance List abilitata</item>
+        <item>Fanboy’s Annoyance List disabilitata</item>
+    </string-array>
+    <string-array name="fanboys_social_blocking_list_array">
+        <item>Default di Sistema</item>
+        <item>Fanboy’s Social Blocking List abilitata</item>
+        <item>Fanboy’s Social Blocking List disabilitata</item>
+    </string-array>
+    <string-array name="ultralist_array">
+        <item>Default di Sistema</item>
+        <item>UltraList abilitata</item>
+        <item>UltraList disabilitata</item>
+    </string-array>
+    <string-array name="ultraprivacy_array">
+        <item>Default di Sistema</item>
+        <item>UltraPrivacy abilitata</item>
+        <item>UltraPrivacy disabilitata</item>
+    </string-array>
+    <string-array name="block_all_third_party_requests_array">
+        <item>Default di Sistema</item>
+        <item>Bloccco di tutte le richieste di terze parti abilitato</item>
+        <item>Bloccco di tutte le richieste di terze parti disabilitato</item>
+    </string-array>
+    <string-array name="font_size_array">
+        <item>Impostazioni di default</item>
+        <item>Dimensione carattere personalizzata</item>
+    </string-array>
+    <string-array name="swipe_to_refresh_array">
+        <item>Impostazioni di default</item>
+        <item>Swipe per aggiornare abilitato</item>
+        <item>Swipe per aggiornare disabilitato</item>
+    </string-array>
+    <string-array name="webview_theme_array">
+        <item>Predefinito</item>
+        <item>Tema Chiaro</item>
+        <item>Tema Scuro</item>
+    </string-array>
+    <string-array name="wide_viewport_array">
+        <item>Impostazioni di default</item>
+        <item>Finestra grande abilitata</item>
+        <item>Finestra grande disabilitata</item>
+    </string-array>
+    <string-array name="display_webpage_images_array">
+        <item>Impostazioni di default</item>
+        <item>Immagini abilitate</item>
+        <item>Immagini disabilitate</item>
+    </string-array>
+    <string name="pinned_ssl_certificate">Certificato SSL appuntato</string>
+        <string name="saved_ssl_certificate">Certificato SSL salvato</string>
+        <string name="current_website_ssl_certificate">Certificato SSL di questo sito</string>
+        <string name="load_an_encrypted_website">Carica un sito Web criptato prima di aprire le impostazioni dei domini per popolare il certificato SSL del sito attuale.</string>
+    <string name="pinned_ip_addresses">Indirizzi IP appuntati</string>
+        <string name="saved_ip_addresses">Indirizzi IP salvati</string>
+        <string name="current_ip_addresses">Indirizzi IP attuali</string>
+
+    <!-- Import/Export.  Android removes double spaces, but extra spaces can be manually specified with the Unicode `\u0020` formatting.
+      The `%1$s` code inserts variables into the displayed text and should be preserved in translation.  <https://developer.android.com/reference/kotlin/java/util/Formatter> -->
+    <string name="bookmarks_and_settings">Segnalibri e impostazioni</string>
+    <string name="sqlite_database_format">Formato del database SQLite</string>
+    <string name="html_format">Formato HTML</string>
+    <string name="encryption">Cifratura</string>
+    <string-array name="encryption_type">
+        <item>Nessuna</item>
+        <item>Password</item>
+        <item>OpenPGP</item>
+    </string-array>
+    <string name="openkeychain_required">La cifratura OpenPGP richiede l\'installazione di OpenKeychain.</string>
+    <string name="openkeychain_import_instructions">Il file non cifrato deve essere importato in un secondo momento dopo che è stato decriptato.</string>
+    <string name="file_location">Posizione del File</string>
+    <string name="browse">Sfoglia</string>
+    <string name="export">Esporta</string>
+    <string name="import_button">Importa</string>  <!-- `import` is a reserved word and cannot be used as the name. -->
+    <string name="decrypt">Decripta</string>
+    <string name="audeon_browser_settings_pbs">audeon browser Android %1$s Impostazioni - Schema %2$d.pbs</string>
+    <string name="audeon_browser_settings_pbs_aes">audeon browser Android %1$s Impostazioni - Schema %2$d.pbs.aes</string>
+    <string name="audeon_browser_bookmarks_html">Segnalibri di audeon browser.html</string>
+    <string name="export_successful">Esportazione riuscita</string>
+    <string name="export_failed">Esportazione fallita:\u0020 %1$s</string>
+    <string name="import_failed">Importazione fallita:\u0020 %1$s</string>
+    <string name="bookmarks_imported">%1$d cartelle e segnalibri importati.</string>
+    <string name="bookmarks_exported">%1$d cartelle e segnalibri esportati.</string>
+
+    <!-- Logcat.  Android removes double spaces, but extra spaces can be manually specified with the Unicode `\u0020` formatting.
+        The `%1$s` code inserts variables into the displayed text and should be preserved in translation.  <https://developer.android.com/reference/kotlin/java/util/Formatter> -->
+    <string name="copy_string">Copia</string>
+    <string name="clear">Cancella</string>
+    <string name="logcat_copied">Logcat copiato.</string>
+    <string name="audeon_browser_logcat_txt">audeon browser Android %1$s Logcat.txt</string>
+    <string name="error_saving_logcat">Errore salvataggio logcat:\u0020 %1$s</string>
+
+    <!-- Guide. -->
+    <string name="overview">Descrizione</string>
+    <string name="local_storage">Archiviazione Locale</string>
+    <string name="ssl_certificates">Certificati SSL</string>
+    <string name="proxies">Proxy</string>
+    <string name="tracking_ids">Tracciamento utenti</string>
+    <string name="gui">Interfaccia</string>
+
+    <!-- Proxy. -->
+    <string name="orbot_not_installed_title">Orbot Non Installato</string>
+    <string name="orbot_not_installed_message">Il Proxy con Orbot non funziona se non è installata la app Orbot.</string>
+    <string name="i2p_not_installed_title">I2P Non Installato</string>
+    <string name="i2p_not_installed_message">Il Proxy con I2P non funziona se non è installata la app I2P.</string>
+    <string name="waiting_for_orbot">In attesa della connessione di Orbot.</string>
+    <string name="custom_proxy_invalid">La URL del proxy personalizzato non è valida.</string>
+
+    <!-- About Activity.  Android removes double spaces, but extra spaces can be manually specified with the Unicode `\u0020` formatting.
+        The `%*$*` code inserts variables into the displayed text and should be preserved in translation.  <https://developer.android.com/reference/kotlin/java/util/Formatter> -->
+    <string name="about_audeon_browser">About Audeon Browser</string>
+    <string name="version">Versione</string>
+        <string name="version_code">Versione %1$s (codice versione %2$d)</string>
+        <string name="hardware">Hardware</string>
+            <string name="brand">Brand: \u0020</string>
+            <string name="manufacturer">Costruttore: \u0020</string>
+            <string name="model">Modello: \u0020</string>
+            <string name="device">Dispositivo: \u0020</string>
+            <string name="bootloader">Bootloader: \u0020</string>
+            <string name="radio">Radio: \u0020</string>
+        <string name="software">Software</string>
+            <string name="android">Android: \u0020</string>
+            <string name="api">%1$s (API %2$d)</string>
+            <string name="security_patch">Patch si sicurezza: \u0020</string>
+            <string name="build">Build: \u0020</string>
+            <string name="kernel">Kernel: \u0020</string>
+            <string name="webview_provider">Provider di WebView: \u0020</string>
+            <string name="webview_version">Versione di WebView: \u0020</string>
+            <string name="orbot">Orbot: \u0020</string>
+            <string name="i2p">I2P: \u0020</string>
+                <string name="fdroid_flavor">%1$s (Versione F-Droid)</string>
+                <string name="google_play_flavor">%1$s (Versione Google Play)</string>
+            <string name="openkeychain">OpenKeychain: \u0020</string>
+        <string name="memory_usage">Utilizzo della Memoria</string>
+            <string name="app_consumed_memory">Memoria utilizzata dalla App: \u0020</string>
+            <string name="app_available_memory">Memoria disponibile App: \u0020</string>
+            <string name="app_total_memory">Memoria totale App: \u0020</string>
+            <string name="app_maximum_memory">Memoria massima App: \u0020</string>
+            <string name="system_consumed_memory">Memoria di sistema utilizzata: \u0020</string>
+            <string name="system_available_memory">Memoria di sistema disponibile: \u0020</string>
+            <string name="system_total_memory">Memoria totale del sistema: \u0020</string>
+            <string name="mebibyte">MiB</string>
+            <string name="easylist_label">EasyList: \u0020</string>
+            <string name="easyprivacy_label">EasyPrivacy: \u0020</string>
+            <string name="fanboys_annoyance_label">Fanboy’s Annoyance List: \u0020</string>
+            <string name="fanboys_social_label">Fanboy’s Social Blocking List: \u0020</string>
+            <string name="ultralist_label">UltraList: \u0020</string>
+            <string name="ultraprivacy_label">UltraPrivacy: \u0020</string>
+        <string name="package_signature">Firma del Pacchetto</string>
+            <string name="issuer_dn">Emittente: \u0020</string>
+            <string name="subject_dn">Soggetto: \u0020</string>
+            <string name="certificate_version">Versione del Certificato: \u0020</string>
+            <string name="serial_number">Numero di Serie: \u0020</string>
+            <string name="signature_algorithm">Algoritmo di firma: \u0020</string>
+        <string name="version_info_copied">Info sulla Versione copiate.</string>
+        <string name="audeon_browser_version_txt">audeon browser Android %1$s Versione.txt</string>
+        <string name="audeon_browser_version_png">audeon browser Android %1$s Versione.png</string>
+    <string name="permissions">Autorizzazioni</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="changelog">Changelog</string>
+    <string name="licenses">Licenze</string>
+    <string name="contributors">Collaboratori</string>
+
+    <!-- Preferences. -->
+    <string name="privacy">Privacy</string>
+        <string name="javascript_preference_summary">Permetti a JavaScript di eseguire programmi (script) sul dispositivo.</string>
+        <string name="cookies_preference_summary">I Cookies sono un\'impostazione a livello di app.
+            Quando la scheda attiva ha i cookies abilitati, anche ogni altra richiesta di rete effettuata in background da altre schede ha i cookies abilitati.</string>
+        <string name="dom_storage_preference">DOM Storage</string>
+        <string name="dom_storage_preference_summary">JavaScript deve essere  abilitato per permettere il funzionamento del Document Object Model storage.</string>
+        <string name="user_agent">User agent</string>
+        <string-array name="translated_user_agent_names">
+            <item>audeon browser</item>
+            <item>WebView Default</item>
+            <item>Firefox su Android</item>
+            <item>Chrome su Android</item>
+            <item>Safari su iOS</item>
+            <item>Firefox su Linux</item>
+            <item>Chromium su Linux</item>
+            <item>Firefox su Windows</item>
+            <item>Chrome su Windows</item>
+            <item>Edge su Windows</item>
+            <item>Safari su macOS</item>
+            <item>Personalizzato</item>
+        </string-array>
+        <string-array name="translated_domain_settings_user_agent_names">  <!-- The translated names of the user agents with a System Default option for the domains spinner. -->
+            <item>Impostazioni di default</item>
+            <item>audeon browser</item>
+            <item>WebView Default</item>
+            <item>Firefox su Android</item>
+            <item>Chrome su Android</item>
+            <item>Safari su iOS</item>
+            <item>Firefox su Linux</item>
+            <item>Chromium su Linux</item>
+            <item>Firefox su Windows</item>
+            <item>Chrome su Windows</item>
+            <item>Edge su Windows</item>
+            <item>Safari su macOS</item>
+            <item>Personalizzato</item>
+        </string-array>
+        <string name="custom_user_agent">User agent personalizzato</string>
+        <string name="incognito_mode">Modalità Incognito</string>
+        <string name="incognito_mode_summary">Cancella la cronologia e la cache al termine del caricamento di ogni pagina.
+            In Modalità Incognito, il tasto "Indietro" chiude la scheda (o l\'applicazione se è aperta solo una scheda).</string>
+        <string name="allow_screenshots">Permetti gli screenshot</string>
+        <string name="allow_screenshots_summary">Permette gli screenshot, la registrazione di video, e la possibilità di visualizzare su schermi non sicuri.
+            La modifica di questa impostazione provoca il riavvio di audeon browser.</string>
+    <string name="filterlists">Lista dei filtri</string>
+        <string name="easylist">EasyList</string>
+        <string name="easylist_summary">Lista principale dei filtri degli annunci.</string>
+        <string name="easyprivacy">EasyPrivacy</string>
+        <string name="easyprivacy_summary">Lista principale dei filtri per i tracker.</string>
+        <string name="fanboys_annoyance_list">Fanboy’s annoyance list</string>
+        <string name="fanboys_annoyance_list_summary">Filtra collegamenti e popups fastidiosi.  Include le liste Fanboy’s social blocking.</string>
+        <string name="fanboys_social_blocking_list">Fanboy’s social blocking list</string>
+        <string name="fanboys_social_blocking_list_summary">Filtra i contenuti dei social media di terze parti.</string>
+        <string name="ultralist">UltraList</string>
+        <string name="ultralist_summary">UltraList filtra gli annunci che EasyList non è in grado di bloccare per non rendere inaccessibili i siti web.</string>
+        <string name="ultraprivacy">UltraPrivacy</string>
+        <string name="ultraprivacy_summary">UltraPrivacy filtra i trackers che EasyList non è in grado di bloccare per non rendere inaccessibili i siti web.</string>
+        <string name="block_all_third_party_requests">Blocca tutte le richieste di Terze Parti</string>
+        <string name="block_all_third_party_requests_summary">Il blocco di tutte le richieste di Terze Parti aumenta privacy, ma impedisce la visualizzazione di molti siti web.</string>
+    <string name="url_modification">Modifica delle URL</string>
+        <string name="tracking_queries">Query di tracciamento</string>
+        <string name="tracking_queries_summary">Rimuovi dall\'URL le query di tracciamento conosciute.</string>
+        <string name="amp_redirects">Reindirizzamento AMP</string>
+        <string name="amp_redirects_summary">Rimuovi dall\'URL le query di reindirizzamento AMP (Accelerated Mobil Pages) conosciute.</string>
+    <string name="search">Ricerca</string>
+        <string-array name="search_entries">
+            <item>Mojeek</item>
+            <item>Audeon</item>
+            <item>MetaGer</item>
+            <item>Google</item>
+            <item>Bing</item>
+            <item>Yahoo</item>
+            <item>Personalizzata</item>
+        </string-array>
+        <string name="custom_url">URL Personalizzata</string>
+        <string name="search_custom_url">Ricerca personalizzata</string>
+    <string name="proxy">Proxy</string>
+        <string name="proxy_none">Nessuno</string>
+        <string name="proxy_tor">Tor</string>
+        <string name="proxy_i2p">I2P</string>
+        <string name="proxy_custom">Personalizzato</string>
+        <string-array name="proxy_entries">
+            <item>Nessuno</item>
+            <item>Tor</item>
+            <item>I2P</item>
+            <item>Personalizzato</item>
+        </string-array>
+        <string name="no_proxy_enabled">Nessuno - connessione diretta a internet.</string>
+        <string name="tor_enabled">Tor - connessione con socks://localhost:9050.</string>
+        <string name="i2p_enabled">I2P - connessione con http://localhost:4444.</string>
+        <string name="custom_proxy">Proxy personalizzato</string>
+        <string name="proxy_custom_url">URL personalizzata del Proxy</string>
+    <string name="full_screen">Schermo intero</string>
+        <string name="full_screen_browsing_mode">Navigazione a schermo intero</string>
+        <string name="full_screen_browsing_mode_summary">Toccare due volte per avviare la navigazione a schermo intero.</string>
+        <string name="hide_app_bar">Nascondi la barra dell\'applicazione</string>
+        <string name="hide_app_bar_summary">Nasconde la barra che contiene l\'URL.</string>
+        <string name="display_under_cutouts">Visualizza sotto i ritagli dello schermo</string>
+        <string name="display_under_cutouts_summary">Visualizza il sito web sotto i ritagli dello schermo come quello della fotocamera.
+            Quando questa impostazione è abilitata, audeon browser sarà anche visualizzato sotto la tastiera. La modifica di questa impostazione provocherà il riavvio di audeon browser su Android &lt; 15.</string>
+    <string name="clear_everything">Elimina tutto</string>
+        <string name="clear_everything_summary">Cancella i cookies, il DOM storage, il logcat e la cache di WebView.  Cancella completamente le cartelle “app_webview” e “cache”.</string>
+        <string name="clear_cookies_preference">Elimina i cookie</string>
+        <string name="clear_cookies_summary">Cancella i cookies.</string>
+        <string name="clear_dom_storage_preference">Elimina il DOM storage</string>
+        <string name="clear_dom_storage_summary">Cancella solo il DOM storage.</string>
+        <string name="clear_logcat">Elimina il logcat</string>
+        <string name="clear_logcat_summary">Cancella il logcat.</string>
+        <string name="clear_cache">Elimina la cache</string>
+        <string name="clear_cache_summary">Cancella solo la cache di WebView.</string>
+    <string name="general">Generale</string>
+        <string name="homepage">Homepage</string>
+        <string name="font_size_preference">Dimensione font</string>
+        <string name="open_intents_in_new_tab">Apri gli intenti in una nuova scheda</string>
+        <string name="open_intents_in_new_tab_summary">Gli intenti sono link inviati da altre app.</string>
+        <string name="swipe_to_refresh">Swipe per aggiornare</string>
+        <string name="swipe_to_refresh_summary">Alcuni siti non funzionano correttamente se questa opzione è abilitata.</string>
+        <string name="download_provider">Provider dei Download</string>
+        <string-array name="download_provider_entries">
+            <item>audeon browser</item>
+            <item>Download manager di Android</item>
+            <item>Applicazione esterna</item>
+        </string-array>
+        <string name="download_with_audeon_browser">audeon browser - Il gestore dei download incluso in audeon browser è semplice ma ha il vantaggio di rispettare i proxy e di utilizzare i cookie (se abilitati),
+            oltre che la capacità di salvare le URL dati.</string>
+        <string name="download_with_android_download_manager">Gestore dei download di Android - Il gestore dei download di Android non rispetta le impostazioni dei proxy di audeon browser ma ha accesso ai cookies
+            (per cui i lo scaricamento di file da siti che richiedono il login probabilmente dovrebbe funzionare).</string>
+        <string name="download_with_external_app">Applicazione esterna - Le applicazioni esterne non rispettano le impostazioni dei proxy di audeon browser e non hanno accesso ai cookie
+            (per cui i lo scaricamento di file da siti che richiedono il login difficilmente funzionerà).</string>
+        <string name="scroll_app_bar">Permetti lo scrolling della barra dell\'applicazione</string>
+        <string name="scroll_app_bar_summary">Permette lo scorrere della barra dell\'applicazione dalla parte alta dello schermo quando si effettua lo scrolling.</string>
+        <string name="bottom_app_bar">Barra dell\'app in basso</string>
+        <string name="bottom_app_bar_summary">Sposta la barra dell\'app nella parte bassa dello schermo. La modifica di questa impostazione provocherà il riavvio di audeon browser.</string>
+        <string name="display_additional_app_bar_icons">Mostra icone addizionali nella barra dell\'applicazione</string>
+        <string name="display_additional_app_bar_icons_summary">Mostra nella barra dell\'applicazione le icone per l\'aggiornamento della pagina e, se lo spazio è disponibile,
+            per aprire i preferiti e per abilitare o disabilitare i cookie. La modifica di questa impostazione provocherà il riavvio di audeon browser.</string>
+        <string name="sort_bookmarks_alphabetically">Elenca i segnalibri alfabeticamente</string>
+        <string name="sort_bookmarks_alphabetically_summary">Elenca i segnalibri in ordine alfabetico, con le cartelle mostrate al di sopra dei segnalibri.
+            Questo disabilita l\'ordinamento manuale dei segnalibri.</string>
+        <string name="app_theme">Tema Applicazione</string>
+        <string-array name="app_theme_entries">
+            <item>Predefinito</item>
+            <item>Chiaro</item>
+            <item>Scuro</item>
+        </string-array>
+        <string name="webview_theme">Tema di WebView</string>
+        <string-array name="webview_theme_entries">
+            <item>Predefinito</item>
+            <item>Chiaro</item>
+            <item>Scuro</item>
+        </string-array>
+        <string name="wide_viewport_preference">Finestra grande</string>
+        <string name="wide_viewport_summary">L\'utilizzo di una finestra grande permette la visualizzazione di alcune pagine web come in modalità desktop.</string>
+        <string name="display_webpage_images">Mostra immagini delle pagine web</string>
+        <string name="display_webpage_images_summary">Disabilita per ridurre il consumo di dati.</string>
+</resources>

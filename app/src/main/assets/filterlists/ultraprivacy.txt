@@ -1,0 +1,14 @@
+[Adblock Plus 2.0]
+! Version: 3
+! Title: UltraPrivacy
+! Last modified: 27 Apr 2023 19:27 UTC
+! Expires: 90 days (update frequency)
+! Homepage: https://www.stoutner.com/privacy-browser-android/filter-lists/ultraprivacy/
+! Licence: GPLv3+ http://www.gnu.org/licenses/gpl-3.0.html
+!
+! I can't imagine that anything that includes `analytics` is good for your privacy.  <https://redmine.stoutner.com/issues/312>
+analytics
+! Block Google Tag Services.  <https://redmine.stoutner.com/issues/449>
+googletagservices
+! There shall be no connecting to Facebook on the backend.  <https://redmine.stoutner.com/issues/858>
+connect.facebook

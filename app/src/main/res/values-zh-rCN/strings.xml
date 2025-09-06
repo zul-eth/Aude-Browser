@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  SPDX-License-Identifier: GPL-3.0-or-later
+  SPDX-FileCopyrightText: 2015-2024 Soren Stoutner <soren@stoutner.com>
+
+  Translation 2023 Xin.  Copyright assigned to Soren Stoutner <soren@stoutner.com>.
+
+  This file is part of audeon browser Android <https://www.stoutner.com/privacy-browser-android/>.
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License as published by the Free Software
+  Foundation, either version 3 of the License, or (at your option) any later
+  version.
+
+  This program is distributed in the hope that it will be useful, but WITHOUT
+  ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+  FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
+  details.
+
+  You should have received a copy of the GNU General Public License along with
+  this program.  If not, see <https://www.gnu.org/licenses/>. -->
+
+<!-- `tools:ignore="MissingTranslation"` allows release APKs to be built if translation strings are missing.  The missing strings will fall back to English. -->
+<resources
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingTranslation" >
+
+    <!-- Activities. -->
+    <string name="audeon_browser">Audeon Browser</string>
+    <string name="short_name">Audeon</string>
+    <!-- For translations, `android_asset_path` should be the localization abbreviation.  For example, Spanish is `es`.  This should not be translated unless the Guide and About sections are localized. -->
+    <string name="android_asset_path">zh-rCN</string>
+
+    <!-- MainWebView.  Android removes double spaces, but extra spaces can be manually specified with the Unicode `\u0020` formatting.
+        The `%1$s` code inserts variables into the displayed text and should be preserved in translation.  <https://developer.android.com/reference/kotlin/java/util/Formatter> -->
+    <string name="privacy_mode">隐私模式</string>
+    <string name="javascript_enabled">开启 JavaScript</string>
+    <string name="javascript_disabled">关闭 JavaScript</string>
+    <string name="cookies_enabled">开启 Cookies</string>
+    <string name="cookies_disabled">关闭 Cookies</string>
+    <string name="dom_storage_enabled">开启 DOM 储存</string>
+    <string name="dom_storage_disabled">关闭 DOM 储存</string>
+    <string name="cookies_deleted">删除 Cookies</string>
+    <string name="dom_storage_deleted">删除 DOM 储存</string>
+    <string name="open_navigation_drawer">打开导航栏</string>
+    <string name="close_navigation_drawer">关闭导航栏</string>
+    <string name="pin_drawer">引脚栏</string>
+    <string name="unrecognized_url">无法识别的链接:\u0020 %1$s</string>
+    <string name="add_tab">增加新的窗口</string>
+    <string name="close_tab">关闭窗口</string>
+    <string name="new_tab">新窗口</string>
+    <string name="loading">加载中…</string>
+    <string name="error">错误:\u0020 %1$s</string>
+    <string name="apply">请求</string>
+
+    <!-- Loading Filter Lists. -->
+    <string name="loading_easylist">加载 EasyList</string>
+    <string name="loading_easyprivacy">加载 EasyPrivacy</string>
+    <string name="loading_fanboys_annoyance_list">加载 Fanboy’s Annoyance List</string>
+    <string name="loading_fanboys_social_blocking_list">加载 Fanboy’s Social Blocking List</string>
+    <string name="loading_ultralist">加载 UltraList</string>
+    <string name="loading_ultraprivacy">加载 UltraPrivacy</string>
+
+    <!-- Custom App Bar. -->
+    <string name="favorite_icon">喜爱的图标</string>
+    <string name="url_or_search_terms">输入网址或关键词</string>
+
+    <!-- View SSL Certificate. Android removes double spaces, but extra spaces can be manually specified with the Unicode `\u0020` formatting. -->
+    <string name="view_ssl_certificate">查看 SSL 证书</string>
+    <string name="unencrypted_website">未加密的网站</string>
+    <string name="no_ssl_certificate">该网站未加密. 这将允许第三方拦截信息, 攻击你的浏览器并注入恶意的病毒.</string>
+    <string name="ssl_certificate">SSL 证书</string>
+    <string name="close">关闭</string>
+    <string name="domain">域名</string>
+    <string name="domain_label">域名: \u0020</string>
+    <string name="ip_addresses">IP 地址: \u0020</string>
+    <string name="issued_to">接收者</string>
+    <string name="issued_by">发送者</string>
+    <string name="common_name">常用名 (CN): \u0020</string>
+    <string name="organization">组织 (O): \u0020</string>
+    <string name="organizational_unit">组织单位 (OU): \u0020</string>
+    <string name="valid_dates">有效期</string>
+    <string name="start_date">开始时间: \u0020</string>
+    <string name="end_date">结束时间: \u0020</string>
+
+    <!-- SSL Certificate Error.  Android removes double spaces, but extra spaces can be manually specified with the Unicode `\u0020` formatting. -->
+    <string name="ssl_certificate_error">SSL 证书错误</string>
+    <string name="proceed">继续</string>
+    <string name="future_certificate">这个证书还未开始</string>
+    <string name="expired_certificate">证书失效</string>
+    <string name="cn_mismatch">公用名与主机名不匹配</string>
+    <string name="untrusted">CA不受信任</string>
+    <string name="invalid_date">证书日期无效</string>
+    <string name="invalid_certificate">证书无效</string>
+    <string name="url">链接</string>
+    <string name="url_label">链接: \u0020</string>
+
+    <!-- Pinned Mismatch. -->
+    <string name="pinned_mismatch">固定不匹配</string>
+    <string name="update">更新</string>
+    <string name="current">当前的</string>
+    <string name="pinned">固定</string>
+
+    <!-- HTTP Authentication. Android removes double spaces, but extra spaces can be manually specified with the Unicode `\u0020` formatting. -->
+    <string name="http_authentication">HTTP 验证</string>
+    <string name="host">Host: \u0020</string>
+    <string name="username">用户名</string>
+    <string name="password">密码</string>
+
+    <!-- Main Navigation Menu. -->
+    <string name="navigation_drawer">导航栏</string>
+    <string name="clear_and_exit">清除并退出</string>
+    <string name="home">主页</string>
+    <string name="back">返回</string>
+    <string name="forward">前进</string>
+    <string name="history">历史记录</string>
+        <string name="clear_history">清除历史记录</string>
+    <string name="open">打开</string>
+    <string name="downloads">下载</string>
+        <string name="no_file_manager_detected">系统没有检测到兼容的文件管理器.</string>
+    <string name="settings">设置</string>
+    <string name="import_export">导入/导出</string>
+    <string name="logcat">抓取日志</string>
+    <string name="webview_devtools">网页调试工具</string>
+    <string name="guide">教程</string>
+    <string name="about">关于</string>
+
+    <!-- MainWebViewActivity Options Menu. -->
+    <string name="javascript">JavaScript</string>
+    <string name="refresh">刷新</string>
+    <string name="stop">暂停</string>
+    <string name="cookies">Cookies</string>
+    <string name="dom_storage">DOM 储存</string>
+    <string name="clear_data">清空数据</string>
+        <string name="clear_cookies">清空 Cookies</string>
+        <string name="clear_dom_storage">清空 DOM 储存</string>
+        <string name="options_fanboys_annoyance_list">Fanboy’s Annoyance List</string>
+        <string name="options_fanboys_social_blocking_list">Fanboy’s Social Blocking List</string>
+        <string name="options_block_all_third_party_requests">阻止所有第三方请求</string>
+    <string name="page">页面</string>
+        <string name="options_user_agent">用户代理</string>
+            <string name="user_agent_audeon_browser">audeon browser</string>
+            <string name="user_agent_webview_default">默认网页</string>
+            <string name="user_agent_firefox_on_android">Firefox on Android</string>
+            <string name="user_agent_chrome_on_android">Chrome on Android</string>
+            <string name="user_agent_safari_on_ios">Safari on iOS</string>
+            <string name="user_agent_firefox_on_linux">Firefox on Linux</string>
+            <string name="user_agent_chromium_on_linux">Chromium on Linux</string>
+            <string name="user_agent_firefox_on_windows">Firefox on Windows</string>
+            <string name="user_agent_chrome_on_windows">Chrome on Windows</string>
+            <string name="user_agent_edge_on_windows">Edge on Windows</string>
+            <string name="user_agent_safari_on_macos">Safari on macOS</string>
+            <string name="user_agent_custom">自定义</string>
+        <string name="swipe_to_refresh_options_menu">下拉刷新</string>
+        <string name="wide_viewport">宽广的视野</string>
+        <string name="display_images">显示图片</string>
+        <string name="dark_webview">黑色界面</string>
+        <string name="font_size">字体大小</string>
+        <string name="find_on_page">网页内搜索</string>
+        <string name="print">打印</string>
+            <string name="audeon_browser_webpage">audeon browser 网页</string>
+        <string name="save">保存</string>
+        <string name="add_to_home_screen">添加到主页面</string>
+        <string name="view_source">浏览资源</string>
+    <string name="share">分享</string>
+        <string name="share_message">分享信息</string>
+        <string name="share_url">分享链接</string>
+        <string name="open_with_app">打开应用</string>
+        <string name="open_with_browser">通过浏览器打开</string>
+    <string name="add_domain_settings">添加域名设置</string>
+    <string name="edit_domain_settings">编辑域名设置</string>
+
+    <!-- Context Menus. -->
+    <string name="open_in_new_tab">在新标签页中打开</string>
+    <string name="open_in_background">在后台打开</string>
+    <string name="open_image_in_new_tab">在新标签页中打开图片</string>
+    <string name="copy_url">复制链接</string>
+    <string name="email_address">邮箱地址</string>
+    <string name="copy_email_address">复制邮箱地址</string>
+    <string name="write_email">写电子邮件</string>
+    <string name="view_image">预览图片</string>
+
+    <!-- Find on Page. -->
+    <string name="previous">上一个</string>
+    <string name="next">下一个</string>
+
+    <!-- Open Dialog. -->
+    <string name="file_is_mht">本文件是MHT存档.</string>
+    <string name="mht_checkbox_explanation">有时需要手动选择MIME封装才能正确打开.</string>
+
+    <!-- Save Dialog.  Android removes double spaces, but extra spaces can be manually specified with the Unicode `\u0020` formatting.  `%%` writes a literal `%`.
+        The `%*$s` code inserts variables into the displayed text and should be preserved in translation.  <https://developer.android.com/reference/kotlin/java/util/Formatter> -->
+    <string name="save_url">保存链接</string>
+    <string name="save_archive">保存存档</string>
+    <string name="save_text">保存文本</string>
+    <string name="save_image">保存图片</string>
+    <string name="file_name">文件名</string>
+    <string name="file">文件</string>
+    <string name="bytes">字节</string>
+    <string name="unknown_size">未知大小</string>
+    <string name="invalid_url">错误的网址</string>
+    <string name="saving_file">保存文件:\u0020 %1$d%% - %2$s</string>
+    <string name="saving_file_progress">保存文件:\u0020 %1$s 字节 - %2$s</string>
+    <string name="saving_file_percentage_progress">保存文件:\u0020 %1$d%% - %2$s 字节 / %3$s 字节 - %4$s</string>
+    <string name="saved">%1$s 保存.</string>
+    <string name="processing_image">处理图片:\u0020 %1$s</string>
+    <string name="error_saving_file">保存失败 %1$s:\u0020 %2$s</string>
+    <string name="unknown_error">未知错误</string>
+
+    <!-- View Headers. Android removes double spaces, but extra spaces can be manually specified with the Unicode `\u0020` formatting.
+        The `%1$s` code inserts variables into the displayed text and should be preserved in translation.  <https://developer.android.com/reference/kotlin/java/util/Formatter> -->
+    <string name="colon">: \u0020</string>
+    <string name="request_headers">请求头</string>
+    <string name="response_message">响应</string>
+    <string name="response_headers">响应头</string>
+    <string name="response_body">响应本身</string>
+    <string name="content_metadata">内容元数据</string>
+    <string name="content_data">内容数据</string>
+    <string name="untrusted_ssl_certificate">SSL证书不受信任.</string>
+    <string name="load_anyway">仍然加载</string>
+    <string name="about_view_headers_message">因为安卓的网页不支持显示资源内容，一个另外的请求被系统调用来显示这个活动的信息,数据和网页主要活动可能存在差异，这个限制将会在隐私浏览器4.x系列解决。</string>
+
+    <!-- Create Home Screen Shortcut Alert Dialog. -->
+    <string name="create_shortcut">创建标签</string>
+    <string name="shortcut_name">标签名</string>
+    <string name="open_with_default_browser">打开默认模式</string>
+    <string name="open_with_audeon_browser">打开隐私模式</string>
+    <string name="cancel">取消</string>
+    <string name="create">新建</string>
+
+    <!-- Bookmarks. -->
+    <string name="bookmarks">书签</string>
+    <string name="database_view">浏览数据</string>
+    <string name="create_bookmark">创建书签</string>
+    <string name="create_folder">创建文件夹</string>
+    <string name="current_bookmark_icon">现在的书签图标</string>
+    <string name="current_folder_icon">现在的文件夹图标</string>
+    <string name="default_folder_icon">默认的文件夹图标</string>
+    <string name="webpage_favorite_icon">喜爱的网页图标</string>
+    <string name="bookmark_name">书签名</string>
+    <string name="folder_name">文件夹名</string>
+    <string name="bookmark_url">书签链接</string>
+    <string name="edit_bookmark">编辑书签</string>
+    <string name="edit_folder">编辑文件夹</string>
+    <string name="move_to_folder">移动到文件夹</string>
+    <string name="move">移动</string>
+
+    <!-- Bookmarks Contextual App Bar.  Android removes double spaces, but extra spaces can be manually specified with the Unicode `\u0020` formatting.
+        The `%1$d` code inserts variables into the displayed text and should be preserved in translation.  <https://developer.android.com/reference/kotlin/java/util/Formatter> -->
+    <string name="selected">选中:\u0020 %1$d</string>
+    <string name="move_up">向上</string>
+    <string name="move_down">向下</string>
+    <string name="edit">编辑</string>
+    <string name="delete">删除</string>
+    <string name="select_all">选中所有</string>
+    <string name="bookmarks_deleted">书签已删除:\u0020 %1$d</string>
+    <string name="undo">取消</string>
+
+    <!-- Bookmarks Database View. -->
+    <string name="bookmarks_database_view">浏览书签数据</string>
+    <string name="all_folders">所有文件夹</string>
+    <string name="home_folder">主页文件</string>
+    <string name="sort">分类</string>
+        <string name="sorted_by_database_id">通过数据类型分类.</string>
+        <string name="sorted_by_display_order">通过文件名分类.</string>
+    <string name="database_id">数据类型:</string>
+    <string name="folder">文件夹:</string>
+    <string name="parent_folder">主文件夹:</string>
+    <string name="display_order">文件名:</string>
+    <string name="cannot_deselect_bookmark">主文件夹被选中时不能删除书签.</string>
+
+    <!-- Requests.  The `%1$d` code inserts variables into the displayed text and should be preserved in translation.  <https://developer.android.com/reference/kotlin/java/util/Formatter> -->
+    <string name="requests">请求</string>
+    <string name="request_details">请求内容</string>
+    <string name="disposition">处理</string>
+        <string name="all">所有</string>
+        <string name="default_label">默认</string>
+        <string name="default_allowed">默认允许</string>
+        <string name="allowed">允许</string>
+        <string name="request_allowed">%1$d. 允许</string>
+        <string name="allowed_plural">允许</string>
+        <string name="third_party_plural">第三方</string>
+        <string name="third_party_blocked">不允许第三方</string>
+        <string name="blocked">不允许</string>
+        <string name="request_blocked">%1$d. 不允许</string>
+        <string name="blocked_plural">不允许</string>
+    <string name="sublist">子表</string>
+
+    <!-- Domains. -->
+    <string name="domains">域名</string>
+    <string name="domain_settings">域名设置</string>
+    <string name="add_domain">添加域名</string>
+    <string name="domain_name_already_exists">该域名已存在</string>
+    <string name="add">添加</string>
+    <string name="domain_name">域名名称</string>
+    <string name="domain_deleted">删除域名</string>
+    <string name="domain_name_instructions">添加*.的所有子域名(例如. *.stoutner.com)</string>
+    <string-array name="font_size_array">
+        <item>系统默认设置</item>
+        <item>自定义字体大小</item>
+    </string-array>
+    <string-array name="swipe_to_refresh_array">
+        <item>系统默认设置</item>
+        <item>启用下拉刷新</item>
+        <item>关闭下拉刷新</item>
+    </string-array>
+    <string-array name="webview_theme_array">
+        <item>系统默认设置</item>
+        <item>亮</item>
+        <item>暗</item>
+    </string-array>
+    <string-array name="wide_viewport_array">
+        <item>系统默认设置</item>
+        <item>打开宽视框</item>
+        <item>关闭宽视框</item>
+    </string-array>
+    <string-array name="display_webpage_images_array">
+        <item>系统默认设置</item>
+        <item>允许查看图片</item>
+        <item>屏蔽图片</item>
+    </string-array>
+    <string name="pinned_ssl_certificate">固定SSL证书</string>
+        <string name="saved_ssl_certificate">保存SSL证书</string>
+        <string name="current_website_ssl_certificate">现在的SSL证书</string>
+        <string name="load_an_encrypted_website">在打开域名设置前根据当前SSL证书加载加密的网页.</string>
+    <string name="pinned_ip_addresses">固定IP地址</string>
+        <string name="saved_ip_addresses">保存IP地址</string>
+        <string name="current_ip_addresses">当前的IP地址</string>
+
+    <!-- Import/Export.  Android removes double spaces, but extra spaces can be manually specified with the Unicode `\u0020` formatting.
+      The `%1$s` code inserts variables into the displayed text and should be preserved in translation.  <https://developer.android.com/reference/kotlin/java/util/Formatter> -->
+    <string name="encryption">加密</string>
+    <string-array name="encryption_type">
+        <item>空</item>
+        <item>密码</item>
+        <item>OpenPGP</item>
+    </string-array>
+    <string name="openkeychain_required">OpenPGP 加密需要 OpenKeychain</string>
+    <string name="openkeychain_import_instructions">未加密的文件会在加密文件中分离后获得</string>
+    <string name="file_location">文件地址</string>
+    <string name="browse">浏览</string>
+    <string name="export">导出</string>
+    <string name="import_button">导入</string>  <!-- `import` is a reserved word and cannot be used as the name. -->
+    <string name="decrypt">解密</string>
+    <string name="audeon_browser_settings_pbs">audeon browser Android %1$s 设置 - Schema %2$d.pbs</string>
+    <string name="audeon_browser_settings_pbs_aes">audeon browser Android %1$s 设置 - Schema %2$d.pbs.aes</string>
+    <string name="export_successful">导出成功.</string>
+    <string name="export_failed">导出失败:\u0020 %1$s</string>
+    <string name="import_failed">导入失败:\u0020 %1$s</string>
+
+    <!-- Logcat.  Android removes double spaces, but extra spaces can be manually specified with the Unicode `\u0020` formatting.
+        The `%1$s` code inserts variables into the displayed text and should be preserved in translation.  <https://developer.android.com/reference/kotlin/java/util/Formatter> -->
+    <string name="copy_string">复制</string>
+    <string name="clear">清除</string>
+    <string name="logcat_copied">复制日志.</string>
+    <string name="audeon_browser_logcat_txt">audeon browser Android %1$s Logcat.txt</string>
+    <string name="error_saving_logcat">保存日志失败:\u0020 %1$s</string>
+
+    <!-- Guide. -->
+    <string name="overview">预览</string>
+    <string name="local_storage">本地空间</string>
+    <string name="ssl_certificates">SSL证书</string>
+    <string name="proxies">代理</string>
+    <string name="tracking_ids">跟踪ID</string>
+    <string name="gui">界面</string>
+
+    <!-- Proxy. -->
+    <string name="orbot_not_installed_title">Orbot 未下载</string>
+    <string name="orbot_not_installed_message">Orbot应用被安装Orbot才会工作.</string>
+    <string name="i2p_not_installed_title">I2P 未下载</string>
+    <string name="i2p_not_installed_message">I2P应用被安装I2P才会工作.</string>
+    <string name="waiting_for_orbot">等待Orbot链接.</string>
+    <string name="custom_proxy_invalid">自定义代理无效.</string>
+
+    <!-- About Activity.  Android removes double spaces, but extra spaces can be manually specified with the Unicode `\u0020` formatting.
+        The `%*$*` code inserts variables into the displayed text and should be preserved in translation.  <https://developer.android.com/reference/kotlin/java/util/Formatter> -->
+    <string name="about_audeon_browser">About Audeon Browser</string>
+    <string name="version">版本</string>
+        <string name="version_code">版本 %1$s (版本代码 %2$d)</string>
+        <string name="hardware">硬件</string>
+            <string name="brand">品牌: \u0020</string>
+            <string name="manufacturer">制造商: \u0020</string>
+            <string name="model">型号: \u0020</string>
+            <string name="device">设备: \u0020</string>
+            <string name="bootloader">Bootloader: \u0020</string>
+            <string name="radio">Radio: \u0020</string>
+        <string name="software">软件</string>
+            <string name="android">安卓: \u0020</string>
+            <string name="api">%1$s (API %2$d)</string>
+            <string name="security_patch">安全补丁: \u0020</string>
+            <string name="build">Build: \u0020</string>
+            <string name="kernel">内核: \u0020</string>
+            <string name="webview_provider">WebView Provider: \u0020</string>
+            <string name="webview_version">WebView Version: \u0020</string>
+            <string name="orbot">Orbot: \u0020</string>
+            <string name="i2p">I2P: \u0020</string>
+                <string name="fdroid_flavor">%1$s (F-Droid flavor)</string>
+                <string name="google_play_flavor">%1$s (Google Play flavor)</string>
+            <string name="openkeychain">OpenKeychain: \u0020</string>
+        <string name="memory_usage">内存使用情况</string>
+            <string name="app_consumed_memory">应用程序占用内存: \u0020</string>
+            <string name="app_available_memory">应用可用内存: \u0020</string>
+            <string name="app_total_memory">应用所有内存: \u0020</string>
+            <string name="app_maximum_memory">应用最大内存: \u0020</string>
+            <string name="system_consumed_memory">系统占用内存: \u0020</string>
+            <string name="system_available_memory">系统可用内存: \u0020</string>
+            <string name="system_total_memory">系统所有内存: \u0020</string>
+            <string name="mebibyte">兆</string>
+            <string name="easylist_label">EasyList: \u0020</string>
+            <string name="easyprivacy_label">EasyPrivacy: \u0020</string>
+            <string name="fanboys_annoyance_label">Fanboy’s Annoyance List: \u0020</string>
+            <string name="fanboys_social_label">Fanboy’s Social Blocking List: \u0020</string>
+            <string name="ultralist_label">UltraList: \u0020</string>
+            <string name="ultraprivacy_label">UltraPrivacy: \u0020</string>
+        <string name="package_signature">包名</string>
+            <string name="issuer_dn">发行人 DN:</string>
+            <string name="subject_dn">主题 DN:</string>
+            <string name="certificate_version">证书版本:</string>
+            <string name="serial_number">序列号:</string>
+            <string name="signature_algorithm">>签名算法:</string>
+        <string name="version_info_copied">复制版本信息.</string>
+        <string name="audeon_browser_version_txt">audeon browser Android %1$s 版本.txt</string>
+        <string name="audeon_browser_version_png">audeon browser Android %1$s 版本.png</string>
+    <string name="permissions">许可权限</string>
+    <string name="privacy_policy">隐私政策</string>
+    <string name="changelog">更新内容</string>
+    <string name="licenses">许可</string>
+    <string name="contributors">贡献者</string>
+
+    <!-- Preferences. -->
+    <string name="privacy">隐私</string>
+        <string name="javascript_preference_summary">JavaScript 允许网页在设备上运行项目.</string>
+        <string name="cookies_preference_summary">Cookies 是应用程序级的设置，当活动的页面允许cookies，后台的其他请求网络的页面也允许cookies.</string>
+        <string name="dom_storage_preference">DOM 储存</string>
+        <string name="dom_storage_preference_summary">JavaScript 必须启用，DOM才能工作.</string>
+        <string name="user_agent">User agent</string>
+        <string-array name="translated_user_agent_names">
+            <item>audeon browser</item>
+            <item>默认 WebView设置</item>
+            <item>Firefox on Android</item>
+            <item>Chrome on Android</item>
+            <item>Safari on iOS</item>
+            <item>Firefox on Linux</item>
+            <item>Chromium on Linux</item>
+            <item>Firefox on Windows</item>
+            <item>Chrome on Windows</item>
+            <item>Edge on Windows</item>
+            <item>Safari on macOS</item>
+            <item>自定义</item>
+        </string-array>
+        <string-array name="translated_domain_settings_user_agent_names">  <!-- The translated names of the user agents with a System Default option for the domains spinner. -->
+            <item>系统默认设置</item>
+            <item>audeon browser</item>
+            <item>默认 WebView设置</item>
+            <item>Firefox on Android</item>
+            <item>Chrome on Android</item>
+            <item>Safari on iOS</item>
+            <item>Firefox on Linux</item>
+            <item>Chromium on Linux</item>
+            <item>Firefox on Windows</item>
+            <item>Chrome on Windows</item>
+            <item>Edge on Windows</item>
+            <item>Safari on macOS</item>
+            <item>自定义</item>
+        </string-array>
+        <string name="custom_user_agent">自定义用户代理</string>
+        <string name="incognito_mode">无痕模式</string>
+        <string name="incognito_mode_summary">在无痕模式中，关闭当前标签页，会清除所有的记录和网页上的痕迹.</string>
+        <string name="allow_screenshots">允许截图</string>
+        <string name="allow_screenshots_summary">允许截图，录视频，在不安全的显示中查看，更改这个设置会重启本浏览器.</string>
+        <string name="easylist">EasyList</string>
+        <string name="easyprivacy">EasyPrivacy</string>
+        <string name="fanboys_annoyance_list">Fanboy’s annoyance list</string>
+        <string name="fanboys_social_blocking_list">Fanboy’s social 黑名单</string>
+        <string name="ultralist">UltraList</string>
+        <string name="ultraprivacy">UltraPrivacy</string>
+        <string name="block_all_third_party_requests">屏蔽第三方请求</string>
+        <string name="block_all_third_party_requests_summary">屏蔽所有第三方包括隐私在内的请求，这会使许多网页崩溃。</string>
+    <string name="url_modification">修改网址</string>
+        <string name="tracking_queries">追踪选项</string>
+        <string name="tracking_queries_summary">移除已知网址的追踪器</string>
+        <string name="amp_redirects">AMP 重定向</string>
+        <string name="amp_redirects_summary">移除已知AMP (Accelerated Mobil Pages) 网址中的重定向选项.</string>
+    <string name="search">搜索</string>
+        <string-array name="search_entries">
+            <item>Mojeek</item>
+            <item>Audeon</item>
+            <item>MetaGer</item>
+            <item>Google</item>
+            <item>Bing</item>
+            <item>Yahoo</item>
+            <item>自定义</item>
+        </string-array>
+        <string name="custom_url">自定义网址</string>
+        <string name="search_custom_url">搜索自定义网址</string>
+    <string name="proxy">代理</string>
+        <string name="proxy_none">None</string>
+        <string name="proxy_tor">Tor</string>
+        <string name="proxy_i2p">I2P</string>
+        <string name="proxy_custom">自定义</string>
+        <string-array name="proxy_entries">
+            <item>None</item>
+            <item>Tor</item>
+            <item>I2P</item>
+            <item>Custom</item>
+        </string-array>
+        <string name="no_proxy_enabled">None - 直连.</string>
+        <string name="tor_enabled">Tor - 通过 socks://localhost:9050 连接.</string>
+        <string name="i2p_enabled">I2P - 通过 http://localhost:4444 连接.</string>
+        <string name="custom_proxy">自定义代理</string>
+        <string name="proxy_custom_url">自定义代理网址</string>
+    <string name="full_screen">全屏</string>
+        <string name="full_screen_browsing_mode">全屏视图</string>
+        <string name="full_screen_browsing_mode_summary">双击打开全屏视图.</string>
+        <string name="hide_app_bar">隐藏应用栏</string>
+        <string name="hide_app_bar_summary">隐藏包含URL的应用栏.</string>
+    <string name="clear_everything">清除所有</string>
+        <string name="clear_cookies_preference">清除 cookies</string>
+        <string name="clear_cookies_summary">清除 cookies.</string>
+        <string name="clear_dom_storage_preference">清除 DOM 储存</string>
+        <string name="clear_dom_storage_summary">清除 DOM 储存.</string>
+        <string name="clear_logcat">清除日志</string>
+        <string name="clear_logcat_summary">清除日志.</string>
+        <string name="clear_cache">清除缓存</string>
+        <string name="clear_cache_summary">清除WebView缓存.</string>
+    <string name="general">通用</string>
+        <string name="homepage">主页</string>
+        <string name="font_size_preference">字体大小</string>
+        <string name="open_intents_in_new_tab">新标签页中打开目标</string>
+        <string name="open_intents_in_new_tab_summary">把目标链接发送到其他应用</string>
+        <string name="swipe_to_refresh">下拉刷新</string>
+        <string name="swipe_to_refresh_summary">下拉刷新开启时部分网页不会工作</string>
+        <string name="scroll_app_bar">滚动应用栏</string>
+        <string name="scroll_app_bar_summary">向下滚动网页时，隐藏顶部状态栏</string>
+        <string name="bottom_app_bar">底部状态栏</string>
+        <string name="bottom_app_bar_summary">移动应用栏到底部，更改这个设置会重启audeon browser</string>
+        <string name="display_additional_app_bar_icons">>显示额外的应用栏图标</string>
+        <string name="display_additional_app_bar_icons_summary">更改在导航栏的刷新网页和在页面打开书签和cookies管理的图标，改变这个设置会重启浏览器。</string>
+        <string name="app_theme">应用主题</string>
+        <string-array name="app_theme_entries">
+            <item>系统默认设置</item>
+            <item>亮</item>
+            <item>暗</item>
+        </string-array>
+        <string name="webview_theme">WebView theme</string>
+        <string-array name="webview_theme_entries">
+            <item>系统默认设置</item>
+            <item>亮</item>
+            <item>暗</item>
+        </string-array>
+        <string name="wide_viewport_preference">宽视角</string>
+        <string name="wide_viewport_summary">使用宽视角让某些站点像桌面站点</string>
+        <string name="display_webpage_images">显示网页图片</string>
+        <string name="display_webpage_images_summary">禁用显示图片来节省流量.</string>
+</resources>

@@ -1,0 +1,44 @@
+<!--
+  SPDX-License-Identifier: GPL-3.0-or-later
+  SPDX-FileCopyrightText: 2016-2018, 2020-2022, 2025 Soren Stoutner <soren@stoutner.com>
+
+  This file is part of Privacy Browser Android <https://www.stoutner.com/privacy-browser-android/>.
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License as published by the Free Software
+  Foundation, either version 3 of the License, or (at your option) any later
+  version.
+
+  This program is distributed in the hope that it will be useful, but WITHOUT
+  ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+  FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
+  details.
+
+  You should have received a copy of the GNU General Public License along with
+  this program.  If not, see <https://www.gnu.org/licenses/>. -->
+
+<html lang="tr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Permissions</title>
+
+        <link rel="stylesheet" href="../css/theme.css">
+
+        <!-- Setting the color scheme instructs the WebView to respect `prefers-color-scheme` @media CSS. -->
+        <meta name="color-scheme" content="light dark">
+    </head>
+
+    <body>
+        <h3>Tam ağ erişimine sahip olma</h3>
+        <p><a href="https://developer.android.com/reference/android/Manifest.permission.html#INTERNET">android.permission.INTERNET</a></p>
+        <p>WebView’ın internete erişimi için gereklidir. Bu izin olmadan, Privacy Browser, “İnternet Olmadan Gizliliğinizi Koruyan Bir Tarayıcı” olacaktır.</p>
+
+        <h3>Kısayolları yükleme</h3>
+        <p><a href="https://developer.android.com/reference/android/Manifest.permission.html#INSTALL_SHORTCUT">com.android.launcher.permission.<wbr>INSTALL_SHORTCUT</a></p>
+        <p>Başlatıcı masaüstüne web sayfalarının kısayollarını eklemek için gereklidir.</p>
+
+        <h3><a href="https://developer.android.com/about/versions/13/features#runtime-receivers">
+            de.audeon.browser.<wbr>standard.<wbr>DYNAMIC_<wbr>RECEIVER_<wbr>NOT_<wbr>EXPORTED_<wbr>PERMISSION</a></h3>
+        <p>Automatically added to all apps targeting API >= 33 (Android 13) to prevent other apps from connecting to dynamic receivers without explicit permission.</p>
+    </body>
+</html>

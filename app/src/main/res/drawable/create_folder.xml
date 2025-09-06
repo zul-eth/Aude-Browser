@@ -1,0 +1,37 @@
+<!--
+  SPDX-License-Identifier: GPL-3.0-or-later
+  SPDX-FileCopyrightText: 2025 Soren Stoutner <soren@stoutner.com>
+
+  This file is part of Privacy Browser Android <https://www.stoutner.com/privacy-browser-android/>.
+
+  It is a modified version of `create_new_folder`, which is part of the Android Material icon set and is released under the Apache License 2.0 <https://fonts.google.com/icons>.
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License as published by the Free Software
+  Foundation, either version 3 of the License, or (at your option) any later
+  version.
+
+  This program is distributed in the hope that it will be useful, but WITHOUT
+  ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+  FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
+  details.
+
+  You should have received a copy of the GNU General Public License along with
+  this program.  If not, see <https://www.gnu.org/licenses/>. -->
+
+<!-- `tools:ignore="VectorRaster"` removes the lint warning about `android:autoMirrored="true"` not applying to API < 21. -->
+<vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:height="24dp"
+    android:width="24dp"
+    android:viewportHeight="24"
+    android:viewportWidth="24"
+    android:autoMirrored="true"
+    tools:ignore="VectorRaster" >
+
+    <!-- A hard coded color must be used until API >= 21.  Then `@color` or `?attr/colorControlNormal` may be used. -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M4,4C2.89,4 2.01,4.89 2.01,6L2,18C2,19.11 2.89,20 4,20L20,20C21.11,20 22,19.11 22,18L22,8C22,6.89 21.11,6 20,6L12,6L10,4L4,4zM11,9L13,9L13,12L16,12L16,14L13,14L13,17L11,17L11,14L8,14L8,12L11,12L11,9z" />
+</vector>

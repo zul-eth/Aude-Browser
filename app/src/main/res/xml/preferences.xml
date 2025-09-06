@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  SPDX-License-Identifier: GPL-3.0-or-later
+  SPDX-FileCopyrightText: 2016-2024 Soren Stoutner <soren@stoutner.com>
+
+  This file is part of Privacy Browser Android <https://www.stoutner.com/privacy-browser-android/>.
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License as published by the Free Software
+  Foundation, either version 3 of the License, or (at your option) any later
+  version.
+
+  This program is distributed in the hope that it will be useful, but WITHOUT
+  ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+  FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
+  details.
+
+  You should have received a copy of the GNU General Public License along with
+  this program.  If not, see <https://www.gnu.org/licenses/>. -->
+
+<PreferenceScreen
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        app:key="@string/privacy_category_key"
+        app:title="@string/privacy" >
+
+        <SwitchPreferenceCompat
+            app:key="@string/javascript_key"
+            app:title="@string/javascript"
+            app:summary="@string/javascript_preference_summary"
+            app:defaultValue="false" />
+
+        <SwitchPreferenceCompat
+            app:key="@string/cookies_key"
+            app:title="@string/cookies"
+            app:summary="@string/cookies_preference_summary"
+            app:defaultValue="false" />
+
+        <SwitchPreferenceCompat
+            app:key="@string/dom_storage_key"
+            app:title="@string/dom_storage_preference"
+            app:summary="@string/dom_storage_preference_summary"
+            app:defaultValue="false" />
+
+        <ListPreference
+            app:key="@string/user_agent_key"
+            app:title="@string/user_agent"
+            app:entries="@array/translated_user_agent_names"
+            app:entryValues="@array/user_agent_names"
+            app:defaultValue="@string/user_agent_default_value"
+            app:icon="@drawable/user_agent" />
+
+        <!-- android:inputType="textVisiblePassword" sets the keyboard to have a dedicated number row.-->
+        <EditTextPreference
+            app:key="@string/custom_user_agent_key"
+            app:title="@string/custom_user_agent"
+            app:defaultValue="@string/custom_user_agent_default_value"
+            android:inputType="textVisiblePassword|textMultiLine" />
+
+        <SwitchPreferenceCompat
+            app:key="@string/incognito_mode_key"
+            app:title="@string/incognito_mode"
+            app:summary="@string/incognito_mode_summary"
+            app:defaultValue="false" />
+
+        <SwitchPreferenceCompat
+            app:key="@string/allow_screenshots_key"
+            app:title="@string/allow_screenshots"
+            app:summary="@string/allow_screenshots_summary"
+            app:defaultValue="false" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:key="filterlists"
+        app:title="@string/filterlists" >
+
+        <SwitchPreferenceCompat
+            app:key="@string/easylist_key"
+            app:title="@string/easylist"
+            app:summary="@string/easylist_summary"
+            app:defaultValue="true" />
+
+        <SwitchPreferenceCompat
+            app:key="@string/easyprivacy_key"
+            app:title="@string/easyprivacy"
+            app:summary="@string/easyprivacy_summary"
+            app:defaultValue="true" />
+
+        <SwitchPreferenceCompat
+            app:key="@string/fanboys_annoyance_list_key"
+            app:title="@string/fanboys_annoyance_list"
+            app:summary="@string/fanboys_annoyance_list_summary"
+            app:defaultValue="true" />
+
+        <SwitchPreferenceCompat
+            app:key="@string/fanboys_social_blocking_list_key"
+            app:title="@string/fanboys_social_blocking_list"
+            app:summary="@string/fanboys_social_blocking_list_summary"
+            app:defaultValue="true" />
+
+        <SwitchPreferenceCompat
+            app:key="@string/ultralist_key"
+            app:title="@string/ultralist"
+            app:summary="@string/ultralist_summary"
+            app:defaultValue="true" />
+
+        <SwitchPreferenceCompat
+            app:key="@string/ultraprivacy_key"
+            app:title="@string/ultraprivacy"
+            app:summary="@string/ultraprivacy_summary"
+            app:defaultValue="true" />
+
+        <SwitchPreferenceCompat
+            app:key="@string/block_all_third_party_requests_key"
+            app:title="@string/block_all_third_party_requests"
+            app:summary="@string/block_all_third_party_requests_summary"
+            app:defaultValue="false" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:key="url_modification"
+        app:title="@string/url_modification" >
+
+        <SwitchPreferenceCompat
+            app:key="@string/tracking_queries_key"
+            app:title="@string/tracking_queries"
+            app:summary="@string/tracking_queries_summary"
+            app:defaultValue="true" />
+
+        <SwitchPreferenceCompat
+            app:key="@string/amp_redirects_key"
+            app:title="@string/amp_redirects"
+            app:summary="@string/amp_redirects_summary"
+            app:defaultValue="true" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:key="search_category"
+        app:title="@string/search" >
+
+        <ListPreference
+            app:key="@string/search_key"
+            app:title="@string/search"
+            app:entries="@array/search_entries"
+            app:entryValues="@array/search_entry_values"
+            app:defaultValue="@string/search_default_value"
+            app:icon="@drawable/search_blue" />
+
+        <EditTextPreference
+            app:key="@string/search_custom_url_key"
+            app:title="@string/search_custom_url"
+            app:defaultValue="@string/search_custom_url_default_value"
+            android:inputType="textUri" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:key="proxy_category"
+        app:title="@string/proxy" >
+
+        <ListPreference
+            app:key="@string/proxy_key"
+            app:title="@string/proxy"
+            app:entries="@array/proxy_entries"
+            app:entryValues="@array/proxy_entry_values"
+            app:defaultValue="@string/proxy_default_value" />
+
+        <EditTextPreference
+            app:key="@string/proxy_custom_url_key"
+            app:title="@string/proxy_custom_url"
+            app:defaultValue="@string/proxy_custom_url_default_value"
+            android:inputType="textUri" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:key="@string/full_screen_category_key"
+        app:title="@string/full_screen" >
+
+        <SwitchPreferenceCompat
+            app:key="@string/full_screen_browsing_mode_key"
+            app:title="@string/full_screen_browsing_mode"
+            app:summary="@string/full_screen_browsing_mode_summary"
+            app:defaultValue="false" />
+
+        <SwitchPreferenceCompat
+            app:key="@string/hide_app_bar_key"
+            app:title="@string/hide_app_bar"
+            app:summary="@string/hide_app_bar_summary"
+            app:defaultValue="true" />
+
+        <SwitchPreferenceCompat
+            app:key="@string/display_under_cutouts_key"
+            app:title="@string/display_under_cutouts"
+            app:summary="@string/display_under_cutouts_summary"
+            app:defaultValue="false" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:key="@string/clear_and_exit_category_key"
+        app:title="@string/clear_and_exit" >
+
+        <SwitchPreferenceCompat
+            app:key="@string/clear_everything_key"
+            app:title="@string/clear_everything"
+            app:summary="@string/clear_everything_summary"
+            app:defaultValue="true" />
+
+        <SwitchPreferenceCompat
+            app:key="@string/clear_cookies_key"
+            app:title="@string/clear_cookies_preference"
+            app:summary="@string/clear_cookies_summary"
+            app:defaultValue="true" />
+
+        <SwitchPreferenceCompat
+            app:key="@string/clear_dom_storage_key"
+            app:title="@string/clear_dom_storage_preference"
+            app:summary="@string/clear_dom_storage_summary"
+            app:defaultValue="true" />
+
+        <SwitchPreferenceCompat
+            app:key="@string/clear_logcat_key"
+            app:title="@string/clear_logcat"
+            app:summary="@string/clear_logcat_summary"
+            app:defaultValue="true" />
+
+        <SwitchPreferenceCompat
+            app:key="@string/clear_cache_key"
+            app:title="@string/clear_cache"
+            app:summary="@string/clear_cache_summary"
+            app:defaultValue="true" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:key="@string/general_category_key"
+        app:title="@string/general" >
+
+        <EditTextPreference
+            app:key="@string/homepage_key"
+            app:title="@string/homepage"
+            app:defaultValue="@string/homepage_default_value"
+            android:inputType="textUri"
+            app:icon="@drawable/home" />
+
+        <!-- `android:inputType="number"` currently doesn't work with AndroidX. -->
+        <EditTextPreference
+            app:key="@string/font_size_key"
+            app:title="@string/font_size_preference"
+            app:defaultValue="@string/font_size_default_value"
+            android:inputType="number"
+            app:icon="@drawable/font_size" />
+
+        <SwitchPreferenceCompat
+            app:key="@string/open_intents_in_new_tab_key"
+            app:title="@string/open_intents_in_new_tab"
+            app:summary="@string/open_intents_in_new_tab_summary"
+            app:defaultValue="true" />
+
+        <SwitchPreferenceCompat
+            app:key="@string/swipe_to_refresh_key"
+            app:title="@string/swipe_to_refresh"
+            app:summary="@string/swipe_to_refresh_summary"
+            app:defaultValue="true" />
+
+        <ListPreference
+            app:key="@string/download_provider_key"
+            app:title="@string/download_provider"
+            app:entries="@array/download_provider_entries"
+            app:entryValues="@array/download_provider_entry_values"
+            app:defaultValue="@string/download_provider_default_value"
+            app:icon="@drawable/download" />
+
+        <SwitchPreferenceCompat
+            app:key="@string/scroll_app_bar_key"
+            app:title="@string/scroll_app_bar"
+            app:summary="@string/scroll_app_bar_summary"
+            app:defaultValue="false" />
+
+        <SwitchPreferenceCompat
+            app:key="@string/bottom_app_bar_key"
+            app:title="@string/bottom_app_bar"
+            app:summary="@string/bottom_app_bar_summary"
+            app:defaultValue="false" />
+
+        <SwitchPreferenceCompat
+            app:key="@string/display_additional_app_bar_icons_key"
+            app:title="@string/display_additional_app_bar_icons"
+            app:summary="@string/display_additional_app_bar_icons_summary"
+            app:defaultValue="false" />
+
+        <SwitchPreferenceCompat
+            app:key="@string/sort_bookmarks_alphabetically_key"
+            app:title="@string/sort_bookmarks_alphabetically"
+            app:summary="@string/sort_bookmarks_alphabetically_summary"
+            app:defaultValue="false" />
+
+        <ListPreference
+            app:key="@string/app_theme_key"
+            app:title="@string/app_theme"
+            app:entries="@array/app_theme_entries"
+            app:entryValues="@array/app_theme_entry_values"
+            app:defaultValue="@string/app_theme_default_value"
+            app:icon="@drawable/app_theme" />
+
+        <ListPreference
+            app:key="@string/webview_theme_key"
+            app:title="@string/webview_theme"
+            app:entries="@array/webview_theme_entries"
+            app:entryValues="@array/webview_theme_entry_values"
+            app:defaultValue="@string/webview_theme_default_value" />
+
+        <SwitchPreferenceCompat
+            app:key="@string/wide_viewport_key"
+            app:title="@string/wide_viewport_preference"
+            app:summary="@string/wide_viewport_summary"
+            app:defaultValue="true" />
+
+        <SwitchPreferenceCompat
+            app:key="@string/display_webpage_images_key"
+            app:title="@string/display_webpage_images"
+            app:summary="@string/display_webpage_images_summary"
+            app:defaultValue="true" />
+    </PreferenceCategory>
+</PreferenceScreen>

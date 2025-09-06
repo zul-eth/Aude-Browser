@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  SPDX-License-Identifier: GPL-3.0-or-later
+  SPDX-FileCopyrightText: 2018-2024 Soren Stoutner <soren@stoutner.com>
+
+  This file is part of Privacy Browser Android <https://www.stoutner.com/privacy-browser-android/>.
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License as published by the Free Software
+  Foundation, either version 3 of the License, or (at your option) any later
+  version.
+
+  This program is distributed in the hope that it will be useful, but WITHOUT
+  ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+  FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
+  details.
+
+  You should have received a copy of the GNU General Public License along with
+  this program.  If not, see <https://www.gnu.org/licenses/>. -->
+
+<!-- `android:fitsSystemWindows="true"` is required for correct layout starting with API >= 35 (Android 15) -->
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:fitsSystemWindows="true" >
+
+    <!-- The linear layout with `orientation="vertical"` keeps the content above the app bar layout.  `app:layout_dodgeInsetEdges="bottom"` as a child of a coordinator layout moves the view above snackbars. -->
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        app:layout_dodgeInsetEdges="bottom" >
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swiperefreshlayout"
+            android:layout_height="0dp"
+            android:layout_width="match_parent"
+            android:layout_weight="1" >
+
+            <WebView
+                android:id="@+id/logcat_webview"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" />
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <!-- The app bar theme must be specified here because the activity uses a `NoActionBar` theme. -->
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:background="?android:attr/colorBackground"
+            android:theme="@style/audeonbrowserAppBar" >
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" />
+
+            <!-- The search linear layout.  It is initially `visibility="gone"` and is only displayed when requested. -->
+            <LinearLayout
+                android:id="@+id/search_linearlayout"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <!-- `android:imeOptions="actionDone"` sets the keyboard to have a `check mark` key instead of a `new line` key. -->
+                <EditText
+                    android:id="@+id/search_edittext"
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="4dp"
+                    android:hint="@string/search"
+                    android:lines="1"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    tools:ignore="Autofill" />
+
+                <TextView
+                    android:id="@+id/search_count_textview"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:text="@string/zero_of_zero" />
+
+                <!-- `android:background="?attr/selectableItemBackground"` adds a ripple animation on touch. -->
+                <ImageView
+                    android:id="@+id/search_previous"
+                    android:layout_height="35dp"
+                    android:layout_width="35dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/previous"
+                    android:background="?attr/selectableItemBackground"
+                    android:contentDescription="@string/previous"
+                    android:onClick="searchPrevious"
+                    app:tint="@color/blue_icon" />
+
+                <!-- `android:background="?attr/selectableItemBackground"` adds a ripple animation on touch. -->
+                <ImageView
+                    android:id="@+id/search_next"
+                    android:layout_height="35dp"
+                    android:layout_width="35dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/next"
+                    android:background="?attr/selectableItemBackground"
+                    android:contentDescription="@string/next"
+                    android:onClick="searchNext"
+                    app:tint="@color/blue_icon" />
+
+                <!-- `android:background="?attr/selectableItemBackground"` adds a ripple animation on touch. -->
+                <ImageView
+                    android:id="@+id/close_search"
+                    android:layout_height="35dp"
+                    android:layout_width="35dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/close"
+                    android:background="?attr/selectableItemBackground"
+                    android:contentDescription="@string/close"
+                    android:onClick="closeSearch"
+                    app:tint="@color/blue_icon" />
+            </LinearLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

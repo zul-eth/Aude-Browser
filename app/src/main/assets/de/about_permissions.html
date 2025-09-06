@@ -1,0 +1,48 @@
+<!--
+  SPDX-License-Identifier: GPL-3.0-or-later
+  SPDX-FileCopyrightText: 2016-2018, 2020-2022, 2025 Soren Stoutner <soren@stoutner.com>
+
+  Translation 2016 Aaron Gerlach <aaron@gerlach.com>.  Copyright assigned to Soren Stoutner <soren@stoutner.com>.
+  Translation 2018 Stefan Erhardt.  Copyright assigned to Soren Stoutner <soren@stoutner.com>.
+  Translation 2019, 2022 Bernhard G. Keller.  Copyright assigned to Soren Stoutner <soren@stoutner.com>.
+
+  This file is part of Privacy Browser Android <https://www.stoutner.com/privacy-browser-android/>.
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License as published by the Free Software
+  Foundation, either version 3 of the License, or (at your option) any later
+  version.
+
+  This program is distributed in the hope that it will be useful, but WITHOUT
+  ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+  FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
+  details.
+
+  You should have received a copy of the GNU General Public License along with
+  this program.  If not, see <https://www.gnu.org/licenses/>. -->
+
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <title>Permissions</title>
+
+        <link rel="stylesheet" href="../css/theme.css">
+
+        <!-- Setting the color scheme instructs the WebView to respect `prefers-color-scheme` @media CSS. -->
+        <meta name="color-scheme" content="light dark">
+    </head>
+
+    <body>
+        <h3>Voller Netzwerkzugriff</h3>
+        <p><a href="https://developer.android.com/reference/android/Manifest.permission.html#INTERNET">android.permission.INTERNET</a></p>
+        <p>Benötigt, damit WebView das Internet nutzen kann. Ohne diese Berechtigung wäre Privacy Browser “Kein Browser: Schützt Ihre Privatsphäre durch Fernbleiben von jeglicher Konnektivität”.</p>
+
+        <h3>Verknüpfungen installieren</h3>
+        <p><a href="https://developer.android.com/reference/android/Manifest.permission.html#INSTALL_SHORTCUT">com.android.launcher.permission.<wbr>INSTALL_SHORTCUT</a></p>
+        <p>Benötigt, um Verknüpfungen zu Websites auf Ihrer Startseite zu erstellen.</p>
+
+        <h3><a href="https://developer.android.com/about/versions/13/features#runtime-receivers">
+            de.audeon.browser.<wbr>standard.<wbr>DYNAMIC_<wbr>RECEIVER_<wbr>NOT_<wbr>EXPORTED_<wbr>PERMISSION</a></h3>
+        <p>Automatisch hinzugefügt für alle Apps mit API >= 33 (Android 13), um zu verhindern, dass sich andere Apps ohne expliziter Erlaubnis mit dynamischen BroadcastReceivern verbinden.</p>
+    </body>
+</html>

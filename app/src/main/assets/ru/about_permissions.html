@@ -1,0 +1,44 @@
+<!--
+  SPDX-License-Identifier: GPL-3.0-or-later
+  SPDX-FileCopyrightText: 2016-2018, 2020-2022 Soren Stoutner <soren@stoutner.com>
+
+  This file is part of Privacy Browser Android <https://www.stoutner.com/privacy-browser-android/>.
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License as published by the Free Software
+  Foundation, either version 3 of the License, or (at your option) any later
+  version.
+
+  This program is distributed in the hope that it will be useful, but WITHOUT
+  ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+  FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
+  details.
+
+  You should have received a copy of the GNU General Public License along with
+  this program.  If not, see <https://www.gnu.org/licenses/>. -->
+
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <title>Permissions</title>
+
+        <link rel="stylesheet" href="../css/theme.css">
+
+        <!-- Setting the color scheme instructs the WebView to respect `prefers-color-scheme` @media CSS. -->
+        <meta name="color-scheme" content="light dark">
+    </head>
+
+    <body>
+        <h3>Полный доступ к сети</h3>
+        <p><a href="https://developer.android.com/reference/android/Manifest.permission.html#INTERNET">android.permission.INTERNET</a></p>
+        <p>Требуется для доступа WebView к интернету. Без этого разрешения Privacy Browser будет отображать “Нет браузера: угрозы вашей конфиденциальности нет из-за отсутствия доступа к интернету”.</p>
+
+        <h3>Установка ярлыков</h3>
+        <p><a href="https://developer.android.com/reference/android/Manifest.permission.html#INSTALL_SHORTCUT">com.android.launcher.permission.<wbr>INSTALL_SHORTCUT</a></p>
+        <p>Требуется для добавления ярлыков веб-сайтов на главный экран.</p>
+
+        <h3><a href="https://developer.android.com/about/versions/13/features#runtime-receivers">
+            de.audeon.browser.<wbr>standard.<wbr>DYNAMIC_<wbr>RECEIVER_<wbr>NOT_<wbr>EXPORTED_<wbr>PERMISSION</a></h3>
+        <p>Автоматически добавляется во все приложения, использующие API >= 33 (Android 13) для предотвращения подключения других приложений к динамическим приемникам без явного разрешения.</p>
+    </body>
+</html>

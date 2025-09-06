@@ -1,0 +1,33 @@
+<!--
+  SPDX-License-Identifier: GPL-3.0-or-later
+  SPDX-FileCopyrightText: 2017, 2022 Soren Stoutner <soren@stoutner.com>
+
+  This file is part of Privacy Browser Android <https://www.stoutner.com/privacy-browser-android/>.
+
+  It is derived from elements of `folder` and `exit_to_app`, which are part of the Android Material icon set <https://fonts.google.com/icons>.  They are released under the Apache License 2.0.
+
+  This program is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License as published by the Free Software
+  Foundation, either version 3 of the License, or (at your option) any later
+  version.
+
+  This program is distributed in the hope that it will be useful, but WITHOUT
+  ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+  FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
+  details.
+
+  You should have received a copy of the GNU General Public License along with
+  this program.  If not, see <https://www.gnu.org/licenses/>. -->
+
+<vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="24dp"
+    android:width="24dp"
+    android:viewportHeight="24"
+    android:viewportWidth="24"
+    android:autoMirrored="true" >
+
+    <path
+        android:fillColor="@color/blue_icon"
+        android:pathData="M4,4C2.9,4 2.01,4.9 2.01,6L2,18C2,19.1 2.9,20 4,20L20,20C21.1,20 22,19.1 22,18L22,8C22,6.9 21.1,6 20,6L12,6L10,4L4,4zM13.75,7.83L18.75,12.83L13.75,17.83L12.34,16.421L14.92,13.83L5.25,13.83L5.25,11.83L14.92,11.83L12.34,9.24L13.75,7.83z" />
+</vector>
